@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
-         tailwind.config = {
+        tailwind.config = {
             theme: {
                 extend: {
                     colors: {
@@ -31,8 +31,9 @@
             }
         }
     </script>
+    
 </head>
-body class="font-sans bg-gray-50 text-dark">
+<body class="font-sans bg-gray-50 text-dark">
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="logo-container">
@@ -64,7 +65,7 @@ body class="font-sans bg-gray-50 text-dark">
         </div>
     </nav>
 
-    <section id="hero-cover" class="relative text-white overflow-hidden min-h-screen flex flex-col justify-center items-center">
+    <section id="hero-cover" class="relative text-white overflow-hidden min-h-screen flex flex-col justify-center items-center" style="background-image: url('LEGO clean - Cover Photo.png');">
         <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
         <div class="container mx-auto px-4 relative z-10 text-center py-20 md:py-28">
             <h1 id="hero-main-slogan" class="text-5xl sm:text-6xl md:text-7xl mb-8 md:mb-10 leading-tight">
@@ -92,62 +93,31 @@ body class="font-sans bg-gray-50 text-dark">
     <section id="about" class="min-h-screen flex flex-col justify-center items-center bg-white">
         <div class="container mx-auto px-4 py-16 md:py-20">
             <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/3">
-                    <div class="profile-container">
-                        <div class="profile-image-wrapper">
-                            <div class="profile-bg"></div>
-                            <img src="profile_pic.png" alt="Ben Rodriguez, Candidate Photo" class="profile-image">
-                        </div>
+                <div class="lg:w-2/5"> 
+                    <div class="bio-image rounded-xl overflow-hidden bg-purple-200 p-2.5 md:p-3 shadow-lg">
+                        <img src="profile_pic.png" alt="Benjamin Rodriguez, Candidate Photo" class="w-full h-auto block rounded-md"> 
                     </div>
                     <div class="mt-8 text-center">
                         <h3 class="text-2xl font-bold text-purple-800">Benjamin Rodriguez</h3>
                         <p class="text-purple-600 text-lg">For Texas Realtors Secretary/Treasurer</p>
                         <div class="mt-6 flex justify-center space-x-6">
-                            <a href="#" aria-label="LinkedIn Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="Twitter Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="Facebook Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/in/trianglerealestatellc/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-linkedin"></i></a>
+                            
+                            <a href="https://www.facebook.com/ben.rodriguez.3152" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-2/3">
+                <div class="lg:w-3/5"> 
                     <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-800">About Benjamin Rodriguez</h2>
                     <div class="prose max-w-none">
-                        <p class="text-lg mb-6">A seasoned real estate professional with 25+ years of experience in Southeast Texas real estate. As Broker/Owner of Triangle Real Estate LLC, I've built a reputation for excellence in both residential and commercial sectors. Additionally, I serve as Regional Marketing Director at Synergy Financial, guiding clients toward tax-free retirement strategies.</p>
+                        <p class="text-lg mb-6">A seasoned real estate professional with over two decades of experience in Southeast Texas. At just 21 years old, he founded Triangle Real Estate LLC in 2007, bringing a fresh perspective to the industry. His firm has since become a trusted name in residential, commercial, and land transactions across the region.</p>
+                        <p class="text-lg mb-6">A lifelong Texan, Benjamin holds an Associates degree in Real Estate from Lamar Institute of Technology and is deeply committed to community service. He has held several leadership positions, including serving as the 2018 President of the Beaumont Board of REALTORS®, Texas REALTORS® Region 9 RVP 2019-2022, and as the 2023 Chair of the Texas Real Estate Political Action Committee (TREPAC). His dedication to the profession has earned him accolades such as the 2015 Salesperson of the Year and recognition as a 2018 Texas Young Professionals Network (YPN) REALTOR® to Watch. Triangle Real Estate LLC was awarded the Better Business Bureau of Southeast Texas Torch Award for Work Place Ethics in 2023.</p>
+                        <p class="text-lg mb-6">Beyond his brokerage, Benjamin is actively involved in political advocacy and community development throughout Southeast Texas. He is a member of the National Association of REALTORS® RPAC Hall of Fame at the $75,000 Level and currently serves as an At Large TREPAC Trustee as well as the Region 10 RPAC Fundraising Trustee covering Texas and Louisiana.</p>
+                        <p class="text-lg mb-6">Benjamin’s approach to real estate is characterized by innovation and a commitment to excellence, making him a respected leader in the industry.</p>
+                        <p class="text-lg mt-6 mb-4">He doesn’t do it alone; Benjamin’s success is rooted in the unwavering support of his wife, Tobetha Rodriguez, who has always been his rock. Their daughter, Autumn Rodriguez, carries on the family legacy as both a licensed REALTOR® and Executive Assistant to her father.</p>
+                        <p class="text-lg mb-4">And at the heart of it all is his beloved granddaughter, Sadie—affectionately known as “Piglet”—who serves as the ultimate reminder that no matter how busy the day, there’s always a reason to wrap up work and get home early.</p>
                                                 
-                        <div class="mb-6">
-                            <h3 class="text-xl font-bold mb-3 text-secondary">Profile</h3>
-                            <ul class="space-y-2">
-                                <li class="experience-item"><strong>Title:</strong> Broker/Owner at Triangle Real Estate LLC</li>
-                                <li class="experience-item"><strong>Location:</strong> Beaumont, Texas, United States</li>
-                                <li class="experience-item"><strong>Skills:</strong> Real Estate Brokerage, Property Management, Financial Planning, Tax-Free Retirement Strategies, Leadership</li>
-                            </ul>
-                        </div>
-                                                
-                        <div class="mb-6">
-                            <h3 class="text-xl font-bold mb-3 text-secondary">Experience</h3>
-                            <ul class="space-y-3">
-                                <li class="experience-item"><strong>Triangle Real Estate LLC (Broker/Owner)</strong> - Founded and manage this full-service firm specializing in residential and commercial real estate. Lead a team of professionals while overseeing operations, marketing, and client care services.</li>
-                                <li class="experience-item">Expanded into property management through Triangle Real Estate PM LLC.</li>
-                                <li class="experience-item">Simultaneously serve as Regional Marketing Director at Synergy Financial.</li>
-                            </ul>
-                        </div>
-                                                
-                        <div class="mb-6">
-                            <h3 class="text-xl font-bold mb-3 text-secondary">Projects & Achievements</h3>
-                            <ul class="space-y-2">
-                                <li class="experience-item">Founded Triangle Real Estate LLC in 2007 and grew the firm to 11 employees.</li>
-                                <li class="experience-item">Integrated financial planning into real estate services to enhance client value.</li>
-                            </ul>
-                        </div>
-                                                
-                        <div class="mb-6">
-                            <h3 class="text-xl font-bold mb-3 text-secondary">Philosophy</h3>
-                            <p class="mb-4">Driven by entrepreneurship and a deep commitment to client success, I'm passionate about helping individuals and families achieve the American Dream through real estate and sound financial planning.</p>
-                        </div>
-                                                
-                        <div class="mt-8 bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r">
-                            <p class="italic text-purple-800">"My focus is clear: to serve the members of Texas REALTORS® with integrity, diligence, and a forward-thinking vision, ensuring our association is not just prepared for the future, but actively shaping it for the better." - Benjamin Rodriguez</p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -156,30 +126,22 @@ body class="font-sans bg-gray-50 text-dark">
 
     <section id="video" class="relative bg-light text-dark min-h-screen flex flex-col justify-center items-center">
         <div class="watermark top-10 left-10 text-9xl font-bold text-purple-800 opacity-10 z-0">LEGO</div>
-        <div class="container mx-auto px-4 relative z-10 py-16 md:py-20 w-full">
-
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2 text-center lg:text-left">
+        <div class="container mx-auto px-4 relative z-10 py-16 md:py-20 w-full"> 
+            <div class="flex flex-col lg:flex-row items-center gap-12"> 
+                <div class="lg:w-1/2 text-center lg:text-left"> 
                     <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-800">My Vision in Action</h2>
                     <p class="text-xl mb-8">learn more about my vision for Texas Realtors.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="#contact" class="bg-secondary hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition inline-block text-center">Get Involved</a>
-                        
                     </div>
                 </div>
-                <div class="lg:w-1/2 w-full flex justify-center lg:justify-end">
-                    <div class="youtube-short-container">
-                        <div class="youtube-shorts-label">SHORTS</div>
-                        <iframe 
-                            width="100%" 
-                            height="100%" 
-                            src="https://youtube.com/shorts/NgXe0mLZnII?feature=share" 
-                            title="YouTube Short - Benjamin Rodriguez for Texas Realtors" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen
-                            class="rounded-lg"
-                        ></iframe>
+                <div class="lg:w-1/2 w-full flex justify-center lg:justify-end"> 
+                 
+                    <div class="hero-video bg-gray-800 rounded-xl overflow-hidden relative purple-glow shadow-2xl"> 
+                        <video class="w-full h-full object-cover" controls autoplay muted>
+                            <source src="videoplayback.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -187,8 +149,7 @@ body class="font-sans bg-gray-50 text-dark">
     </section>
 
     <section id="lego" class="min-h-screen flex flex-col justify-center items-center bg-purple-800 text-white">
-        <div class="container mx-auto px-4 text-center py-20 md:py-24">
-
+        <div class="container mx-auto px-4 text-center py-20 md:py-24"> 
             <h2 class="text-4xl md:text-5xl font-bold mb-16 md:mb-20">The <span class="text-secondary">L.E.G.O.</span> Building Blocks</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 max-w-6xl mx-auto">
                 <div class="lego-letter bg-white bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-white border-opacity-20 flex flex-col items-center justify-start text-center">
@@ -216,19 +177,32 @@ body class="font-sans bg-gray-50 text-dark">
     </section>
 
     <section id="contact" class="min-h-screen flex flex-col justify-center items-center bg-purple-50">
-        <div class="container mx-auto px-4 py-16 md:py-20">
-
+        <div class="container mx-auto px-4 py-16 md:py-20"> 
             <div class="w-full max-w-2xl mx-auto">
-                <div class="m-4 md:m-8 p-4 md:p-8 bg-white shadow-lg rounded-lg">
+                <div class="m-4 md:m-8 p-4 md:p-8 bg-white shadow-lg rounded-lg"> 
+                    <div class="grid"> 
+                        <div class="mb-8"> 
+                            <h3 class="text-2xl font-bold pb-4 text-purple-800">Quick Links</h3>
+                            <a class="text-blue-600 flex gap-1 items-center mb-2 hover:underline" href="https://forms.gle/ktmvu6NzQvx26e2d8" target="_blank">
+                                <span>Google Form (View Live)</span>
+                                <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16 8.4l-8.9 8.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7L14.6 7H7q-.425 0-.712-.288T6 6t.288-.712T7 5h10q.425 0 .713.288T18 6v10q0 .425-.288.713T17 17t-.712-.288T16 16z"/></svg></i>
+                            </a>
+                            <a class="text-blue-600 flex gap-1 items-center hover:underline" href="https://docs.google.com/spreadsheets/d/1QS-KI_lDr_dcLjKsXXHsQoWBN9d_Py9qct2x502QEA0/edit?resourcekey=&gid=493688371#gid=493688371" target="_blank">
+                                <span>Google Sheet (Responses)</span>
+                                <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16 8.4l-8.9 8.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7L14.6 7H7q-.425 0-.712-.288T6 6t.288-.712T7 5h10q.425 0 .713.288T18 6v10q0 .425-.288.713T17 17t-.712-.288T16 16z"/></svg></i>
+                            </a>
+                        </div>
+                    </div>
+
                     <h1 class="text-3xl md:text-4xl font-bold text-center text-purple-800 mb-8">LEGO FORM</h1>
 
                     <form
-                    id="campaignContactForm"
-                    action="https://docs.google.com/forms/d/e/1FAIpQLScPz1RDHS0Q5MtvN48OqsemcI8uPy8c2xWi2MvbnKDSHnoQsA/formResponse"
-                    method="POST"
-                    target="hidden_iframe"
-                    onsubmit="submitted=true;"
-                    class="space-y-4"
+                      id="campaignContactForm" 
+                      action="https://docs.google.com/forms/d/e/1FAIpQLScPz1RDHS0Q5MtvN48OqsemcI8uPy8c2xWi2MvbnKDSHnoQsA/formResponse"
+                      method="POST"
+                      target="hidden_iframe"
+                      onsubmit="submitted=true;"
+                      class="space-y-4" 
                     >
                       <div>
                         <label for="form-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
@@ -271,17 +245,8 @@ body class="font-sans bg-gray-50 text-dark">
             </div>
         </div>
     </section>
-
-    <div id="submission-popup" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[999] hidden transition-opacity duration-300 ease-in-out opacity-0">
-        <div class="bg-white p-8 md:p-10 rounded-lg shadow-xl text-center w-11/12 max-w-md transform transition-all duration-300 ease-in-out scale-95">
-            <div class="flex justify-center mb-4">
-                <i class="fas fa-check-circle text-green-500 text-5xl"></i>
-            </div>
-            <p class="text-2xl font-semibold text-gray-800 mb-3">Response Submitted</p>
-            <p class="text-gray-600 mb-6">Thank you! We'll be in touch if a reply is needed.</p>
-            <button id="close-popup-button" class="bg-primary text-white px-8 py-2 rounded-lg hover:bg-purple-700 transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">Close</button>
-        </div>
-    </div>
+        
+   
 
     <footer class="bg-purple-800 text-white py-8">
         <div class="container mx-auto px-4">
@@ -310,6 +275,6 @@ body class="font-sans bg-gray-50 text-dark">
             </div>
         </div>
     </footer>
-
     <script src="app.js"></script>
+</body>
 </html>
