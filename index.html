@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Build Something Together - Campaign for Texas Realtors Secretary/Treasurer</title>
+    <link rel="icon" href="favicon.png" type="image/png"> 
+
+       <meta property="og:title" content="Let's Build Something Together - B-ROD 2027 Campaign">
+    <meta property="og:description" content="Campaign website for Benjamin Rodriguez (B-ROD) for Texas Realtors Secretary/Treasurer. Let's build Leadership, Empowerment, Growth, and Opportunity together.">
+    <meta property="og:image" content="LEGO clean - Cover Photo.png"> 
+    <meta property="og:url" content="YOUR_WEBSITE_URL_HERE"> 
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -36,7 +44,8 @@
 <body class="font-sans bg-gray-50 text-dark">
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="logo-container">
+            
+            <a href="#hero-cover" class="logo-container">
                 <div class="campaign-logo-wrapper mr-3">
                     <div class="campaign-lego-block">
                         <div class="campaign-lego-nubs">
@@ -46,8 +55,8 @@
                     </div>
                     <div class="campaign-b-rod-text">B-ROD 2027</div>
                 </div>
-            </div>
-            <div class="hidden md:flex space-x-8">
+            </a>
+            <div class="hidden md:flex space-x-8 nav-links">
                 <a href="#hero-cover" class="hover:text-primary transition font-medium">Home</a>
                 <a href="#about" class="hover:text-primary transition font-medium">About</a>
                 <a href="#video" class="hover:text-primary transition font-medium">Video</a>
@@ -56,17 +65,18 @@
             </div>
             <button id="mobile-menu-button" class="md:hidden text-primary"><i class="fas fa-bars text-2xl"></i></button>
         </div>
-        <div id="mobile-menu" class="mobile-menu hidden flex-col space-y-4 md:hidden">
-            <a href="#hero-cover" class="hover:text-primary transition">Home</a>
-            <a href="#about" class="hover:text-primary transition">About</a>
-            <a href="#video" class="hover:text-primary transition">Video</a>
-            <a href="#lego" class="hover:text-primary transition">L.E.G.O.</a>
-            <a href="#contact" class="hover:text-primary transition">Contact</a>
+        <div id="mobile-menu" class="mobile-menu hidden flex-col space-y-4 md:hidden nav-links">
+            <a href="#hero-cover" class="block px-4 py-2 hover:text-primary transition">Home</a>
+            <a href="#about" class="block px-4 py-2 hover:text-primary transition">About</a>
+            <a href="#video" class="block px-4 py-2 hover:text-primary transition">Video</a>
+            <a href="#lego" class="block px-4 py-2 hover:text-primary transition">L.E.G.O.</a>
+            <a href="#contact" class="block px-4 py-2 hover:text-primary transition">Contact</a>
         </div>
     </nav>
 
-    <section id="hero-cover" class="relative text-white overflow-hidden min-h-screen flex flex-col justify-center items-center" style="background-image: url('LEGO clean - Cover Photo.png');">
-        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+    <section id="hero-cover" class="relative text-white overflow-hidden min-h-screen flex flex-col justify-center items-center" style="background-image: url('LEGO clean - Cover Photo.png'); background-size: cover; background-position: center;">
+        
+        <div class="absolute inset-0 hero-vignette-overlay z-0"></div>
         <div class="container mx-auto px-4 relative z-10 text-center py-20 md:py-28">
             <h1 id="hero-main-slogan" class="text-5xl sm:text-6xl md:text-7xl mb-8 md:mb-10 leading-tight">
                 <span class="hero-slogan-word animate-pop-in" style="animation-delay: 0.2s;">LET'S BUILD</span>
@@ -90,8 +100,9 @@
         </div>
     </section>
 
+    
     <section id="about" class="min-h-screen flex flex-col justify-center items-center bg-white">
-        <div class="container mx-auto px-4 py-16 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 py-16 md:py-20">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-2/5"> 
                     <div class="bio-image rounded-xl overflow-hidden bg-purple-100 p-2.5 md:p-3 shadow-lg">
@@ -102,7 +113,6 @@
                         <p class="text-purple-600 text-lg">For Texas Realtors Secretary/Treasurer</p>
                         <div class="mt-6 flex justify-center space-x-6">
                             <a href="https://www.linkedin.com/in/trianglerealestatellc/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-linkedin"></i></a>
-                            
                             <a href="https://www.facebook.com/ben.rodriguez.3152" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
@@ -116,27 +126,25 @@
                         <p class="text-lg mb-6">Benjamin’s approach to real estate is characterized by innovation and a commitment to excellence, making him a respected leader in the industry.</p>
                         <p class="text-lg mt-6 mb-4">He doesn’t do it alone; Benjamin’s success is rooted in the unwavering support of his wife, Tobetha Rodriguez, who has always been his rock. Their daughter, Autumn Rodriguez, carries on the family legacy as both a licensed REALTOR® and Executive Assistant to her father.</p>
                         <p class="text-lg mb-4">And at the heart of it all is his beloved granddaughter, Sadie affectionately known as “Piglet” who serves as the ultimate reminder that no matter how busy the day, there’s always a reason to wrap up work and get home early.</p>
-                                                
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    
     <section id="video" class="relative bg-light text-dark min-h-screen flex flex-col justify-center items-center">
         <div class="watermark top-10 left-10 text-9xl font-bold text-purple-800 opacity-10 z-0">LEGO</div>
-        <div class="container mx-auto px-4 relative z-10 py-16 md:py-20 w-full"> 
+        <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10 py-16 md:py-20 w-full"> 
             <div class="flex flex-col lg:flex-row items-center gap-12"> 
                 <div class="lg:w-1/2 text-center lg:text-left"> 
                     <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-800">My Vision in Action</h2>
-                    <p class="text-xl mb-8">learn more about my vision for Texas Realtors.</p>
+                    <p class="text-xl mb-8">Learn more about my vision for Texas Realtors.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="#contact" class="bg-secondary hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition inline-block text-center">Get Involved</a>
                     </div>
                 </div>
                 <div class="lg:w-1/2 w-full flex justify-center lg:justify-end"> 
-                 
                     <div class="hero-video bg-gray-800 rounded-xl overflow-hidden relative purple-glow shadow-2xl"> 
                         <video class="w-full h-full object-cover" controls autoplay muted>
                             <source src="videoplayback.mp4" type="video/mp4">
@@ -148,55 +156,41 @@
         </div>
     </section>
 
+    
     <section id="lego" class="min-h-screen flex flex-col justify-center items-center bg-purple-800 text-white">
-        <div class="container mx-auto px-4 text-center py-20 md:py-24"> 
+        <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 text-center py-20 md:py-24"> 
             <h2 class="text-4xl md:text-5xl font-bold mb-16 md:mb-20">The <span class="text-secondary">L.E.G.O.</span> Building Blocks</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 max-w-6xl mx-auto">
                 <div class="lego-letter bg-white bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-white border-opacity-20 flex flex-col items-center justify-start text-center">
                     <div class="text-7xl font-extrabold mb-4 text-secondary">L</div>
                     <h3 class="text-2xl md:text-3xl font-bold mb-3">Leadership</h3>
-                    <p class="text-base md:text-lg opacity-90 leading-relaxed">Proven guidance for our association's future</p>
+                    <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Proven guidance for our association's future</p>
                 </div>
                 <div class="lego-letter bg-white bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-white border-opacity-20 flex flex-col items-center justify-start text-center">
                     <div class="text-7xl font-extrabold mb-4 text-secondary">E</div>
                     <h3 class="text-2xl md:text-3xl font-bold mb-3">Empowers</h3>
-                    <p class="text-base md:text-lg opacity-90 leading-relaxed">Strengthening every member's potential</p>
+                    <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Strengthening every member's potential</p>
                 </div>
                 <div class="lego-letter bg-white bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-white border-opacity-20 flex flex-col items-center justify-start text-center">
                     <div class="text-7xl font-extrabold mb-4 text-secondary">G</div>
                     <h3 class="text-2xl md:text-3xl font-bold mb-3">Growth</h3>
-                    <p class="text-base md:text-lg opacity-90 leading-relaxed">Expanding opportunities for all</p>
+                    <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Expanding opportunities for all</p>
                 </div>
                 <div class="lego-letter bg-white bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-white border-opacity-20 flex flex-col items-center justify-start text-center">
                     <div class="text-7xl font-extrabold mb-4 text-secondary">O</div>
                     <h3 class="text-2xl md:text-3xl font-bold mb-3">Opportunity</h3>
-                    <p class="text-base md:text-lg opacity-90 leading-relaxed">Creating pathways to success</p>
+                    <p class="text-base md:text-lg opacity-90 leading-relaxed lego-description">Creating pathways to success</p>
                 </div>
             </div>
         </div>
     </section>
 
+    
     <section id="contact" class="min-h-screen flex flex-col justify-center items-center bg-purple-50">
-        <div class="container mx-auto px-4 py-16 md:py-20"> 
+        <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 py-16 md:py-20"> 
             <div class="w-full max-w-2xl mx-auto">
                 <div class="m-4 md:m-8 p-4 md:p-8 bg-white shadow-lg rounded-lg"> 
-                     <!--
-                    <div class="grid"> 
-                        <div class="mb-8"> 
-                            <h3 class="text-2xl font-bold pb-4 text-purple-800">Quick Links</h3>
-                            <a class="text-blue-600 flex gap-1 items-center mb-2 hover:underline" href="https://forms.gle/ktmvu6NzQvx26e2d8" target="_blank">
-                                <span>Google Form (View Live)</span>
-                                <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16 8.4l-8.9 8.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7L14.6 7H7q-.425 0-.712-.288T6 6t.288-.712T7 5h10q.425 0 .713.288T18 6v10q0 .425-.288.713T17 17t-.712-.288T16 16z"/></svg></i>
-                            </a>
-                            <a class="text-blue-600 flex gap-1 items-center hover:underline" href="https://docs.google.com/spreadsheets/d/1QS-KI_lDr_dcLjKsXXHsQoWBN9d_Py9qct2x502QEA0/edit?resourcekey=&gid=493688371#gid=493688371" target="_blank">
-                                <span>Google Sheet (Responses)</span>
-                                <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16 8.4l-8.9 8.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7L14.6 7H7q-.425 0-.712-.288T6 6t.288-.712T7 5h10q.425 0 .713.288T18 6v10q0 .425-.288.713T17 17t-.712-.288T16 16z"/></svg></i>
-                            </a>
-                        </div>
-                    </div>
-                     -->
                     <h1 class="text-3xl md:text-4xl font-bold text-center text-purple-800 mb-8">LEGO FORM</h1>
-
                     <form
                       id="campaignContactForm" 
                       action="https://docs.google.com/forms/d/e/1FAIpQLScPz1RDHS0Q5MtvN48OqsemcI8uPy8c2xWi2MvbnKDSHnoQsA/formResponse"
@@ -247,13 +241,12 @@
         </div>
     </section>
         
-   
-
     <footer class="bg-purple-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0 text-center md:text-left">
-                    <div class="campaign-logo-wrapper flex items-center justify-center md:justify-start">
+                    
+                    <a href="#hero-cover" class="campaign-logo-wrapper flex items-center justify-center md:justify-start">
                         <div class="campaign-lego-block mr-3">
                             <div class="campaign-lego-nubs">
                                 <div class="campaign-nub"></div><div class="campaign-nub"></div><div class="campaign-nub"></div><div class="campaign-nub"></div><div class="campaign-nub"></div>
@@ -261,9 +254,9 @@
                             <div class="campaign-lego-text">LEGO</div>
                         </div>
                         <div class="campaign-b-rod-text">B-ROD 2027</div>
-                    </div>
+                    </a>
                 </div>
-                <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-center md:text-left mt-4 md:mt-0">
+                <div class="nav-links flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 text-center md:text-left mt-4 md:mt-0">
                     <a href="#hero-cover" class="hover:text-secondary transition">Home</a>
                     <a href="#about" class="hover:text-secondary transition">About</a>
                     <a href="#video" class="hover:text-secondary transition">Video</a>
@@ -272,7 +265,7 @@
                 </div>
             </div>
             <div class="border-t border-purple-700 mt-6 pt-6 text-sm text-center opacity-70">
-                <p>© <span id="currentYear"></span></p>
+                <p>© <span id="currentYear"></span> Benjamin Rodriguez Campaign. All Rights Reserved.</p> 
             </div>
         </div>
     </footer>
