@@ -128,3 +128,8 @@
             .min-h-screen > .container { padding-top: 3rem; padding-bottom: 3rem; }
             #lego.min-h-screen > .container { padding-top: 4rem; padding-bottom: 4rem; }
         }
+
+        #submission-popup {
+            transition-property: opacity;
+        }
+        #submission-popup > div > div
