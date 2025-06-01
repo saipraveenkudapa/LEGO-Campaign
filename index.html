@@ -31,7 +31,6 @@
             }
         }
     </script>
-    
 </head>
 <body class="font-sans bg-gray-50 text-dark">
     <nav class="bg-white shadow-md sticky top-0 z-50">
@@ -56,7 +55,7 @@
             </div>
             <button id="mobile-menu-button" class="md:hidden text-primary"><i class="fas fa-bars text-2xl"></i></button>
         </div>
-        <div id="mobile-menu" class="mobile-menu flex-col space-y-4 md:hidden">
+        <div id="mobile-menu" class="mobile-menu hidden flex-col space-y-4 md:hidden">
             <a href="#hero-cover" class="hover:text-primary transition">Home</a>
             <a href="#about" class="hover:text-primary transition">About</a>
             <a href="#video" class="hover:text-primary transition">Video</a>
@@ -65,7 +64,7 @@
         </div>
     </nav>
 
-    <section id="hero-cover" class="relative text-white overflow-hidden min-h-screen flex flex-col justify-center items-center" style="background-image: url('LEGO clean - Cover Photo.png');">
+    <section id="hero-cover" class="relative text-white overflow-hidden min-h-screen flex flex-col justify-center items-center">
         <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
         <div class="container mx-auto px-4 relative z-10 text-center py-20 md:py-28">
             <h1 id="hero-main-slogan" class="text-5xl sm:text-6xl md:text-7xl mb-8 md:mb-10 leading-tight">
@@ -94,28 +93,60 @@
         <div class="container mx-auto px-4 py-16 md:py-20">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/3">
-                    <div class="bio-image rounded-xl overflow-hidden">
-                        <img src="Lindsay_Navarre.jpeg" alt="Candidate Photo" class="w-full h-auto">
+                    <div class="profile-container">
+                        <div class="profile-image-wrapper">
+                            <div class="profile-bg"></div>
+                            <img src="profile_pic.png" alt="Ben Rodriguez, Candidate Photo" class="profile-image">
+                        </div>
                     </div>
-                    <div class="mt-6 text-center">
-                        <h3 class="text-xl font-bold text-purple-800">Lindsay Navarre</h3>
-                        <p class="text-purple-600">For Texas Realtors Secretary/Treasurer</p>
-                        <div class="mt-4 flex justify-center space-x-4">
-                            <a href="#" aria-label="LinkedIn Profile" class="text-purple-500 hover:text-purple-700 text-xl"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="Twitter Profile" class="text-purple-500 hover:text-purple-700 text-xl"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="Email Candidate" class="text-purple-500 hover:text-purple-700 text-xl"><i class="fas fa-envelope"></i></a>
+                    <div class="mt-8 text-center">
+                        <h3 class="text-2xl font-bold text-purple-800">Benjamin Rodriguez</h3>
+                        <p class="text-purple-600 text-lg">For Texas Realtors Secretary/Treasurer</p>
+                        <div class="mt-6 flex justify-center space-x-6">
+                            <a href="#" aria-label="LinkedIn Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Facebook Profile" class="text-purple-500 hover:text-purple-700 text-2xl"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-2/3">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-800">About The Candidate</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-800">About Benjamin Rodriguez</h2>
                     <div class="prose max-w-none">
-                        <p class="text-lg mb-4">With over 15 years of dedicated service to the Texas real estate community, I bring a wealth of experience and a fresh perspective to the role of Secretary/Treasurer. My background in [mention key experience area, e.g., local association leadership, financial oversight] has prepared me to tackle the challenges and opportunities facing our association.</p>
+                        <p class="text-lg mb-6">A seasoned real estate professional with 25+ years of experience in Southeast Texas real estate. As Broker/Owner of Triangle Real Estate LLC, I've built a reputation for excellence in both residential and commercial sectors. Additionally, I serve as Regional Marketing Director at Synergy Financial, guiding clients toward tax-free retirement strategies.</p>
                         
-                        <h3 class="text-xl font-bold mt-8 mb-4 text-secondary">My Commitment</h3>
-                        <p>As your Secretary/Treasurer, I pledge to bring transparency, fiscal responsibility, and innovative thinking to our association's leadership. My LEGO vision—Leadership that Empowers Growth and Opportunity—represents the building blocks we need to construct a stronger future for all Texas Realtors. I am dedicated to serving our members and advancing our profession with integrity and a forward-thinking approach.</p>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-3 text-secondary">Profile</h3>
+                            <ul class="space-y-2">
+                                <li class="experience-item"><strong>Title:</strong> Broker/Owner at Triangle Real Estate LLC</li>
+                                <li class="experience-item"><strong>Location:</strong> Beaumont, Texas, United States</li>
+                                <li class="experience-item"><strong>Skills:</strong> Real Estate Brokerage, Property Management, Financial Planning, Tax-Free Retirement Strategies, Leadership</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-3 text-secondary">Experience</h3>
+                            <ul class="space-y-3">
+                                <li class="experience-item"><strong>Triangle Real Estate LLC (Broker/Owner)</strong> - Founded and manage this full-service firm specializing in residential and commercial real estate. Lead a team of professionals while overseeing operations, marketing, and client care services.</li>
+                                <li class="experience-item">Expanded into property management through Triangle Real Estate PM LLC.</li>
+                                <li class="experience-item">Simultaneously serve as Regional Marketing Director at Synergy Financial.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-3 text-secondary">Projects & Achievements</h3>
+                            <ul class="space-y-2">
+                                <li class="experience-item">Founded Triangle Real Estate LLC in 2007 and grew the firm to 11 employees.</li>
+                                <li class="experience-item">Integrated financial planning into real estate services to enhance client value.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-3 text-secondary">Philosophy</h3>
+                            <p class="mb-4">Driven by entrepreneurship and a deep commitment to client success, I'm passionate about helping individuals and families achieve the American Dream through real estate and sound financial planning.</p>
+                        </div>
+                        
                         <div class="mt-8 bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r">
-                            <p class="italic text-purple-800">"I believe in building bridges between members, associations, and the communities we serve. Together, we can create a foundation for success that benefits every realtor across Texas."</p>
+                            <p class="italic text-purple-800">"My focus is clear: to serve the members of Texas REALTORS® with integrity, diligence, and a forward-thinking vision, ensuring our association is not just prepared for the future, but actively shaping it for the better." - Benjamin Rodriguez</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +156,8 @@
 
     <section id="video" class="relative bg-light text-dark min-h-screen flex flex-col justify-center items-center">
         <div class="watermark top-10 left-10 text-9xl font-bold text-purple-800 opacity-10 z-0">LEGO</div>
-        <div class="container mx-auto px-4 relative z-10 py-16 md:py-20"> 
+        <div class="container mx-auto px-4 relative z-10 py-16 md:py-20 w-full">
+
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 text-center lg:text-left">
                     <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-800">My Vision in Action</h2>
@@ -134,10 +166,10 @@
                         <a href="#contact" class="bg-secondary hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition inline-block text-center">Get Involved</a>
                     </div>
                 </div>
-                <div class="lg:w-1/2 w-full">
-                    <div class="hero-video bg-gray-800 rounded-xl overflow-hidden relative purple-glow shadow-2xl aspect-w-16 aspect-h-9">
+                <div class="lg:w-1/2 w-full flex justify-center lg:justify-end">
+                    <div class="hero-video bg-gray-800 rounded-xl overflow-hidden relative purple-glow shadow-2xl">
                         <video class="w-full h-full object-cover" controls autoplay muted>
-                            <source src="Lindsay Navarre _ Political Campaign Video.mp4" type="video/mp4">
+                            <source src="videoplayback.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -147,7 +179,8 @@
     </section>
 
     <section id="lego" class="min-h-screen flex flex-col justify-center items-center bg-purple-800 text-white">
-        <div class="container mx-auto px-4 text-center py-20 md:py-24"> 
+        <div class="container mx-auto px-4 text-center py-20 md:py-24">
+
             <h2 class="text-4xl md:text-5xl font-bold mb-16 md:mb-20">The <span class="text-secondary">L.E.G.O.</span> Building Blocks</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 max-w-6xl mx-auto">
                 <div class="lego-letter bg-white bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-white border-opacity-20 flex flex-col items-center justify-start text-center">
@@ -175,50 +208,72 @@
     </section>
 
     <section id="contact" class="min-h-screen flex flex-col justify-center items-center bg-purple-50">
-            <div class="container mx-auto px-4 py-16 md:py-20">
-                <div class="max-w-lg mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-purple-800">Get Involved</h2>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-4 text-secondary text-center">Contact the Campaign</h3>
-                        <form id="campaignContactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                            
-                            <input type="hidden" name="access_key" value="19c4503d-4342-4b56-8045-d790d440b2c2">
+        <div class="container mx-auto px-4 py-16 md:py-20">
 
-                            
-                            <input type="hidden" name="subject" value="New Contact from B-ROD 2027 Campaign Site">
-                            
-                            
+            <div class="w-full max-w-2xl mx-auto">
+                <div class="m-4 md:m-8 p-4 md:p-8 bg-white shadow-lg rounded-lg">
+                    <h1 class="text-3xl md:text-4xl font-bold text-center text-purple-800 mb-8">LEGO FORM</h1>
 
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500" required>
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500" required>
-                            </div>
-                            <div>
-                                <label for="message-text" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                                <textarea id="message-text" name="message" rows="4" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500" required></textarea>
-                            </div>
-                            <button type="submit" class="bg-primary hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg transition w-full">Send Message</button>
-                        </form>
-                    </div>
+                    <form
+                    id="campaignContactForm"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLScPz1RDHS0Q5MtvN48OqsemcI8uPy8c2xWi2MvbnKDSHnoQsA/formResponse"
+                    method="POST"
+                    target="hidden_iframe"
+                    onsubmit="submitted=true;"
+                    class="space-y-4"
+                    >
+                      <div>
+                        <label for="form-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input
+                          type="text"
+                          id="form-name"
+                          name="entry.51566254" 
+                          class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label for="form-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input
+                          type="email"
+                          id="form-email"
+                          name="entry.1924887456"
+                          class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label for="form-message-text" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea
+                          id="form-message-text"
+                          name="entry.857861953"
+                          rows="4"
+                          class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-500"
+                        ></textarea>
+                      </div>
+                      <button
+                        type="submit"
+                        class="bg-primary hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg transition w-full"
+                      >
+                        Send Message
+                      </button>
+                    </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { alert('Thanks for submitting!'); window.submitted=false; if(document.getElementById('campaignContactForm')) { document.getElementById('campaignContactForm').reset(); } }"></iframe>
                 </div>
-            </div>
-        </section>
-
-        </body>
-        <div id="submission-popup" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[999] hidden transition-opacity duration-300 ease-in-out opacity-0">
-            <div class="bg-white p-8 md:p-10 rounded-lg shadow-xl text-center w-11/12 max-w-md transform transition-all duration-300 ease-in-out scale-95">
-                <div class="flex justify-center mb-4">
-                    <i class="fas fa-check-circle text-green-500 text-5xl"></i>
-                </div>
-                <p class="text-2xl font-semibold text-gray-800 mb-3">Response Submitted</p>
-                <p class="text-gray-600 mb-6">Thank you! We'll be in touch if a reply is needed.</p>
-                <button id="close-popup-button" class="bg-primary text-white px-8 py-2 rounded-lg hover:bg-purple-700 transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">Close</button>
             </div>
         </div>
+    </section>
+
+    <div id="submission-popup" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[999] hidden transition-opacity duration-300 ease-in-out opacity-0">
+        <div class="bg-white p-8 md:p-10 rounded-lg shadow-xl text-center w-11/12 max-w-md transform transition-all duration-300 ease-in-out scale-95">
+            <div class="flex justify-center mb-4">
+                <i class="fas fa-check-circle text-green-500 text-5xl"></i>
+            </div>
+            <p class="text-2xl font-semibold text-gray-800 mb-3">Response Submitted</p>
+            <p class="text-gray-600 mb-6">Thank you! We'll be in touch if a reply is needed.</p>
+            <button id="close-popup-button" class="bg-primary text-white px-8 py-2 rounded-lg hover:bg-purple-700 transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">Close</button>
+        </div>
+    </div>
 
     <footer class="bg-purple-800 text-white py-8">
         <div class="container mx-auto px-4">
@@ -247,6 +302,8 @@
             </div>
         </div>
     </footer>
-    <script src="app.js" defer></script>
+    <script>
+        
+    </script>
 </body>
 </html>

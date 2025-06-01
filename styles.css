@@ -1,11 +1,5 @@
- @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700;800;900&display=swap');
-
-        #hero-cover {
-            /* min-height is now handled by Tailwind class min-h-screen */
-            /* display: flex; align-items: center; justify-content: center; -- Handled by Tailwind */
-            background-size: cover; background-position: center; background-repeat: no-repeat;
-            background-color: #3b0f44; /* Fallback background color */
-        }
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700;800;900&display=swap');
+        
         #hero-main-slogan .hero-slogan-word {
             font-family: 'Montserrat', sans-serif; font-weight: 800; color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); letter-spacing: 0.5px; line-height: 1.2;
@@ -52,16 +46,21 @@
             100% { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in-up {
-            animation: fade-in-up 0.8s ease-out forwards; opacity: 0;
+            animation: fade-in-up 0.8s ease-out forwards; 
+            opacity: 0;
         }
 
-        .hero-video { aspect-ratio: 16/9; }
+        .hero-video {
+            aspect-ratio: 9/16;
+            width: 100%;
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .lego-letter { transition: all 0.3s ease; }
         .lego-letter:hover { transform: translateY(-8px) scale(1.03); background-color: rgba(255, 255, 255, 0.25) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .watermark { position: absolute; /* opacity: 0.03; */ z-index: 0; pointer-events: none; } /* z-index adjusted for watermark */
-        .bio-image { box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2); border: 5px solid white; }
-        .logo-container { display: inline-flex; align-items: center; }
-        .purple-glow { box-shadow: 0 0 15px rgba(94, 24, 110, 0.4); }
+        .watermark { position: absolute; z-index: 0; pointer-events: none; }
         .form-input { transition: all 0.3s ease; }
         .form-input:focus { border-color: #5E186E; box-shadow: 0 0 0 3px rgba(94, 24, 110, 0.2); }
 
@@ -69,7 +68,7 @@
         .campaign-lego-block { border: 2px solid white; padding: 12px 18px 10px 18px; position: relative; display: inline-block; margin-bottom: 6px; background-color: #5E186E; border-radius: 2px; }
         .campaign-lego-nubs { display: flex; justify-content: space-between; position: absolute; top: -8px; left: 0; right: 0; padding: 0 8px; }
         .campaign-nub { width: 12px; height: 8px; background-color: #5E186E; border: 2px solid white; box-sizing: border-box; border-radius: 2px; z-index: 10; }
-        .campaign-lego-text { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: 2px; color: white; }
+        .campaign-lego-text { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: 2px; color white; }
         .campaign-b-rod-text { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: white; margin-top: 4px; }
 
         nav .campaign-lego-block { padding: 6px 12px 4px 12px; border-width: 1.5px; margin-bottom: 3px; }
@@ -78,9 +77,80 @@
         nav .campaign-lego-text { font-size: 20px; letter-spacing: 1.5px; }
         nav .campaign-b-rod-text { font-size: 12px; margin-top: 3px; color: #5E186E; }
 
+        /* Enhanced Profile Picture Styles */
+        .profile-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .profile-image-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 8px solid white;
+            background: white;
+            padding: 8px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-image-wrapper:hover .profile-image {
+            transform: scale(1.02);
+        }
+        
+        /* Semi-circle background design */
+        .profile-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .profile-bg::before {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -30%;
+            width: 160%;
+            height: 160%;
+            background: radial-gradient(circle at center, 
+                                      rgba(94, 24, 110, 0.15) 0%, 
+                                      rgba(94, 24, 110, 0) 70%);
+            z-index: 1;
+        }
+        
+        .profile-bg::after {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -30%;
+            width: 160%;
+            height: 160%;
+            background: radial-gradient(circle at center, 
+                                      rgba(229, 114, 0, 0.1) 0%, 
+                                      rgba(229, 114, 0, 0) 70%);
+            z-index: 1;
+        }
+
         @media (max-width: 768px) {
-            /* Hero section min-height can be adjusted for mobile if 100vh is too much */
-            /* #hero-cover { min-height: 70vh; } */
             #hero-cover .container { padding-top: 5rem; padding-bottom: 5rem; }
             #hero-main-slogan { font-size: 2.25rem; margin-bottom: 1.5rem; }
             #hero-main-slogan .hero-slogan-word { letter-spacing: 0.25px; line-height: 1.25; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
@@ -90,9 +160,7 @@
             .hero-lego-text-image { font-size: 1.875rem; }
             .hero-brod-text-image { font-size: 1.125rem; margin-top: 8px; }
 
-            .hero-video { aspect-ratio: 9/16; }
-            .mobile-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-            .mobile-menu.active { display: flex; }
+            .mobile-menu { position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
 
             .campaign-lego-block { border-width: 1.5px; padding: 10px 12px 8px 12px; margin-bottom: 4px; }
             .campaign-lego-nubs { top: -5px; padding: 0 5px; }
@@ -101,13 +169,9 @@
             .campaign-b-rod-text { font-size: 11px; margin-top: 2px; }
             nav .campaign-b-rod-text { color: #5E186E; }
 
-            /* Adjust section padding for mobile if min-h-screen causes too much empty space with less content */
             .min-h-screen > .container { padding-top: 4rem; padding-bottom: 4rem; }
-
-
-            #lego { padding-top: 5rem; padding-bottom: 5rem; } /* Retains specific padding for LEGO section on mobile */
-            #lego.min-h-screen > .container { padding-top: 5rem; padding-bottom: 5rem; } /* Ensure LEGO padding is respected */
-
+            #lego { padding-top: 5rem; padding-bottom: 5rem; }
+            #lego.min-h-screen > .container { padding-top: 5rem; padding-bottom: 5rem; }
             #lego h2 { font-size: 2rem; margin-bottom: 2.5rem; }
             .lego-letter { padding: 1.25rem; }
             .lego-letter .text-7xl { font-size: 3rem;  margin-bottom: 0.75rem; }
@@ -124,12 +188,33 @@
             #lego h2 { font-size: 1.5rem; }
             .lego-letter .text-7xl { font-size: 2.25rem; }
             .lego-letter .text-2xl { font-size: 1rem; }
-
             .min-h-screen > .container { padding-top: 3rem; padding-bottom: 3rem; }
             #lego.min-h-screen > .container { padding-top: 4rem; padding-bottom: 4rem; }
+
+            .hero-video {
+                max-width: 280px;
+            }
         }
 
         #submission-popup {
             transition-property: opacity;
         }
-        #submission-popup > div > div
+        
+        /* Hero section background gradient */
+        #hero-cover {
+            background: linear-gradient(135deg, #5E186E 0%, #3b0f44 100%);
+        }
+
+        /* Experience bullet points */
+        .experience-item {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .experience-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #5E186E;
+            font-weight: bold;
+        }
