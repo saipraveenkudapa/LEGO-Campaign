@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700;800;900&display=swap');
         
 #hero-cover {
-    /* background-size: cover; background-position: center; background-repeat: no-repeat; */ /* Managed by inline style */
+    
 }
 
-/* HERO VIGNETTE OVERLAY ADDED */
+
 .hero-vignette-overlay {
     background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
 }
@@ -14,7 +14,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); letter-spacing: 0.5px; line-height: 1.2;
 }
 #hero-main-slogan .hero-slogan-word.slogan-secondary {
-    color: #E57200; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: #e500ce; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 #hero-lego-brod {
     display: flex; flex-direction: column; align-items: center; margin-top: 2rem;
@@ -60,7 +60,7 @@
 }
 
 .hero-video {
-    aspect-ratio: 9/16; 
+    aspect-ratio: 12/20; 
     width: 100%;       
     max-width: 320px;  
     margin-left: auto; 
