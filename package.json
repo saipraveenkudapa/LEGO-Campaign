@@ -1,16 +1,15 @@
 {
-  "name": "lego-campaign",
-  "version": "1.0.0",
-  "description": "",
+  "name": "lego",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --open --host"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.8",
     "tailwindcss": "^4.1.8",
     "vite": "^6.3.5"
   }
