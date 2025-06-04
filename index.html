@@ -49,10 +49,8 @@
       </div>
     </nav>
 
-    <section id="hero-cover" class="lego-bg relative text-white overflow-hidden min-h-[100svh] flex flex-col justify-center items-center">
-
-      <!-- <div class="absolute inset-0 hero-vignette-overlay z-0"></div> -->
-      <div class="container mx-auto px-4 relative z-10 text-center py-20 md:py-28 flex flex-col items-center justify-center">
+    <section id="hero-cover" class="lego-bg relative text-white overflow-hidden min-h-[120svh]">
+      <div class="container mx-auto px-4 relative z-10 text-center flex flex-col items-center justify-center h-svh">
         <h1 id="hero-main-slogan" class="text-5xl sm:text-6xl md:text-7xl mb-8 md:mb-10 leading-tight pt-20">
           <span class="hero-slogan-word animate-pop-in" style="animation-delay: 0.2s;">LET'S BUILD</span>
           <span class="hero-slogan-word animate-pop-in" style="animation-delay: 0.4s;">SOMETHING</span>
@@ -64,19 +62,22 @@
           </div>
         </div>
 
-
-
         <div class="mt-10 md:mt-12 animate-fade-in-up" style="animation-delay: 1.2s;">
-          <a href="#video" class="bg-secondary hover:bg-[#c000b5] text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-transform transform hover:scale-105 inline-block">
+          <a href="#video" class="bg-gradient-to-r from-secondary-800 via-secondary-400 to-secondary-800 ring-3 ring-secondary-300/80 hover:brightness-125 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition-transform transform hover:scale-105 inline-block">
             Learn More <i class="fas fa-arrow-down ml-2"></i>
           </a>
-
         </div>
       </div>
+
+      <!-- Divider Bottom -->
+      <i class="divider absolute w-full h-[100px] bottom-0 overflow-hidden pointer-events-none">
+        <img src="/static/dividers/legos.svg" alt="lego svg pattern" class="absolute w-full h-full top-0 left-0 object-cover invert">
+      </i>
     </section>
 
 
-    <section id="about" class="min-h-svh flex flex-col justify-center items-center bg-white">
+    <section id="about" class="min-h-svh flex flex-col justify-center items-center bg-white relative">
+
       <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 py-16 md:py-20">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="lg:w-2/5">
@@ -110,13 +111,13 @@
 
     <section id="video" class="relative bg-light text-dark min-h-svh flex flex-col justify-center items-center">
       <div class="watermark top-10 left-10 text-9xl font-bold text-primary-800 opacity-10 z-0">LEGO</div>
-      <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10 py-16 md:py-20 w-full">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10 py-16 md:py-20">
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="lg:w-1/2 text-center lg:text-left">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-800">My Vision in Action</h2>
             <p class="text-xl mb-8">Learn more about my vision for Texas Realtors.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#contact" class="bg-secondary hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition inline-block text-center">Get Involved</a>
+              <a href="#contact" class="btn btn-primary">Get Involved</a>
             </div>
           </div>
           <div class="w-full flex justify-center lg:justify-end overflow-hidden">
@@ -202,7 +203,7 @@
               </div>
               <button
                 type="submit"
-                class="bg-primary hover:bg-primary-800 text-white font-bold py-3 px-6 rounded-lg transition w-full">
+                class="btn btn-secondary w-full">
                 Send Message
               </button>
             </form>

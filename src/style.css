@@ -37,7 +37,21 @@
 
 /* TEXT GRADIENT UTILITIES */
 .text-gradient {
-	@apply text-transparent bg-clip-text bg-gradient-to-r from-secondary-700 via-secondary-200 to-secondary-700;
+	@apply text-transparent bg-clip-text bg-gradient-to-r from-secondary-600 via-secondary-200 to-secondary-600;
+}
+
+.btn {
+	@apply inline-block text-center text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out cursor-pointer;
+}
+.btn-gradient {
+	@apply bg-gradient-to-r from-secondary-800 via-secondary-400 to-secondary-800 ring-3 ring-secondary-300/80 hover:brightness-125 hover:ring-white shadow-lg transition-transform transform hover:scale-105;
+}
+
+.btn-primary {
+	@apply bg-secondary hover:brightness-150;
+}
+.btn-secondary {
+	@apply bg-primary hover:brightness-150;
 }
 .lego-bg {
 	background-image: 
@@ -52,14 +66,6 @@
 
 html, body {
 	@apply overflow-x-hidden;
-}
-
-.hero-vignette-overlay {
-	background: radial-gradient(
-		ellipse at center,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 1) 90%
-	);
 }
 
 #hero-main-slogan .hero-slogan-word {
