@@ -35,10 +35,11 @@
 	--font-serif: "Lora", serif;
 }
 
-/* TEXT GRADIENT UTILITIES */
+
 .text-gradient {
-	@apply text-transparent bg-clip-text bg-gradient-to-r from-secondary-600 via-secondary-200 to-secondary-600;
+  color: var(--color-secondary);
 }
+
 
 .btn {
 	@apply inline-block text-center text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out cursor-pointer;
@@ -54,13 +55,7 @@
 	@apply bg-primary hover:brightness-150;
 }
 .lego-bg {
-	background-image: 
-		radial-gradient(
-			ellipse at center,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(0, 0, 0, 1) 90%
-		),
-		url("/bg-legos.png");
+	background-image: url("/bg-legos.png");
 	@apply bg-cover bg-center bg-no-repeat bg-fixed;
 }
 
