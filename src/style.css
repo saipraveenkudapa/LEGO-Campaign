@@ -4,7 +4,7 @@
 
 @theme {
 	/* COLORS */
-	--color-primary: #5e186e; 
+	--color-primary: #5e186e;
 	--color-primary-100: #F3E8FF;
 	--color-primary-200: #E9D5FF;
 	--color-primary-300: #D8B4FE;
@@ -14,7 +14,7 @@
 	--color-primary-700: #7E22CE;
 	--color-primary-800: #5E186E;
 	--color-primary-900: #581C87;
-	
+
 	--color-secondary: #e500ce;
 	/* create a secondary color pallette using #e500ce as the 500 */
 	--color-secondary-100: #FDE8FF;
@@ -56,7 +56,7 @@
 }
 .lego-bg {
 	background-image: url("/bg-legos.png");
-	@apply bg-cover bg-center bg-no-repeat bg-fixed;
+	@apply bg-cover bg-center bg-no-repeat; /* MODIFIED: Removed bg-fixed */
 }
 
 html, body {
@@ -318,11 +318,11 @@ nav .campaign-lego-text {
 	.mobile-menu {
 		@apply absolute top-full left-0 right-0 bg-white p-4 shadow-lg border-t border-gray-200;
 	}
-	
+
 	.mobile-menu.hidden {
 		@apply hidden;
 	}
-	
+
 	.mobile-menu:not(.hidden) {
 		@apply flex flex-col space-y-4;
 	}
