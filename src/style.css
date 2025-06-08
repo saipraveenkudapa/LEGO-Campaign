@@ -438,5 +438,5 @@ nav .campaign-lego-text {
 
 
 .is-ios .lego-bg {
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
