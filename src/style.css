@@ -225,7 +225,6 @@ nav .campaign-nub {
 nav .campaign-lego-text {
 	@apply text-xl tracking-[1.5px];
 }
-/* nav .campaign-b-rod-text { font-size: 12px; margin-top: 3px; color: #5E186E; } Already defined above */
 
 .profile-container {
 	@apply relative w-full max-w-full mx-auto;
@@ -282,7 +281,6 @@ nav .campaign-lego-text {
 .nav-links a.active-link {
 	@apply text-primary font-bold;
 }
-/* For mobile menu, ensure active style is distinct */
 #mobile-menu a.active-link {
 	@apply bg-primary-100;
 }
@@ -348,8 +346,6 @@ nav .campaign-lego-text {
 	.campaign-b-rod-text {
 		@apply text-xs mt-0.5;
 	}
-	/* nav .campaign-b-rod-text { color: #5E186E; } Already defined */
-
 	.min-h-svh > .container {
 		@apply pt-16 pb-16;
 	}
@@ -427,7 +423,6 @@ nav .campaign-lego-text {
 	@apply transition-opacity;
 }
 
-
 .experience-item {
 	@apply relative pl-6 mb-4;
 }
@@ -436,7 +431,28 @@ nav .campaign-lego-text {
 	content: "•";
 }
 
+/* --- iOS Background Fix --- */
+/*
+  This creates a 'fake' fixed background for iOS devices
+  to work around the browser's bug with 'background-attachment: fixed'.
+*/
 
+/* 1. Create a pseudo-element on the root HTML tag that acts as a fixed background layer. */
+.is-ios::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Place it behind all other content */
+  background-image: url("/bg-legos.png");
+  background-size: cover;
+  background-position: center;
+  pointer-events: none; /* Make sure it doesn't interfere with clicks */
+}
+
+/* 2. On iOS, remove the original backgrounds from the sections that should be 'see-through'. */
 .is-ios .lego-bg {
-  background-attachment: fixed;
+  background: none;
 }
