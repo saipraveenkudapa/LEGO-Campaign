@@ -437,6 +437,11 @@ nav .campaign-lego-text {
   to work around the browser's bug with 'background-attachment: fixed'.
 */
 
+/* On iOS, the body needs a transparent background to let the pseudo-element show through */
+.is-ios body {
+    background: transparent;
+}
+
 /* 1. Create a pseudo-element on the root HTML tag that acts as a fixed background layer. */
 .is-ios::before {
   content: '';
