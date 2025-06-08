@@ -57,7 +57,7 @@
 
 .lego-bg {
 	background-image: url("/bg-legos.png");
-	background-attachment: fixed; /* This is the key change */
+	background-attachment: fixed;
 	@apply bg-cover bg-center bg-no-repeat;
 }
 
@@ -434,4 +434,9 @@ nav .campaign-lego-text {
 .experience-item:before {
 	@apply absolute left-0 text-primary font-bold;
 	content: "•";
+}
+
+
+.is-ios .lego-bg {
+  background-attachment: scroll;
 }
