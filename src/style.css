@@ -54,10 +54,11 @@
 .btn-secondary {
 	@apply bg-primary hover:brightness-150;
 }
+
 .lego-bg {
 	background-image: url("/bg-legos.png");
-	@apply bg-center bg-no-repeat;
-	background-size: 100% auto;
+	background-attachment: fixed; /* This is the key change */
+	@apply bg-cover bg-center bg-no-repeat;
 }
 
 html, body {
@@ -433,5 +434,4 @@ nav .campaign-lego-text {
 .experience-item:before {
 	@apply absolute left-0 text-primary font-bold;
 	content: "•";
-}
 }
