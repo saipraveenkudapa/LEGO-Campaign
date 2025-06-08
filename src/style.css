@@ -432,18 +432,12 @@ nav .campaign-lego-text {
 	content: "•";
 }
 
-/* --- iOS Background Fix --- */
-/*
-  This creates a 'fake' fixed background for iOS devices
-  to work around the browser's bug with 'background-attachment: fixed'.
-*/
 
-/* On iOS, the body needs a transparent background to let the pseudo-element show through */
 .is-ios body {
     background: transparent;
 }
 
-/* 1. Create a pseudo-element on the root HTML tag that acts as a fixed background layer. */
+
 .is-ios::before {
   content: '';
   position: fixed;
@@ -451,14 +445,14 @@ nav .campaign-lego-text {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1; /* Place it behind all other content */
+  z-index: -1; 
   background-image: url("/bg-legos.png");
   background-size: cover;
   background-position: center;
-  pointer-events: none; /* Make sure it doesn't interfere with clicks */
+  pointer-events: none; 
 }
 
-/* 2. On iOS, remove the original backgrounds from the sections that should be 'see-through'. */
+
 .is-ios .lego-bg {
   background: none;
 }
