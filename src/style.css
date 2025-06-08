@@ -56,7 +56,8 @@
 }
 .lego-bg {
 	background-image: url("/bg-legos.png");
-	@apply bg-cover bg-center bg-no-repeat; /* MODIFIED: Removed bg-fixed */
+	@apply bg-center bg-no-repeat;
+	background-size: 100% auto;
 }
 
 html, body {
@@ -432,4 +433,5 @@ nav .campaign-lego-text {
 .experience-item:before {
 	@apply absolute left-0 text-primary font-bold;
 	content: "•";
+}
 }
