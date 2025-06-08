@@ -72,7 +72,6 @@
         </div>
       </div>
 
-      <!-- Divider Bottom -->
       <i class="divider absolute w-full h-[100px] bottom-0 overflow-hidden pointer-events-none">
         <img src="/static/dividers/legos.svg" alt="lego svg pattern" class="absolute w-full h-full top-0 left-0 object-cover invert">
       </i>
@@ -136,8 +135,9 @@
     </section>
 
 
-    <section id="lego" class="min-h-svh flex flex-col justify-center items-center lego-bg text-white">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 text-center py-20 md:py-24">
+    <section id="lego" class="min-h-svh flex flex-col justify-center items-center lego-bg text-white relative">
+      <div class="absolute inset-0 bg-black/40 z-0"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 text-center py-20 md:py-24 relative z-10">
         <h2 class="text-4xl md:text-5xl font-bold mb-16 md:mb-20">The <span class="text-secondary">L.E.G.O.</span> Building Blocks</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 max-w-6xl mx-auto">
           <div class="lego-letter bg-primary/40 bg-opacity-10 p-8 md:p-10 rounded-xl backdrop-blur-sm border border-primary-300/30 flex flex-col items-center justify-start text-center">
