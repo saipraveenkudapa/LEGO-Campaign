@@ -286,6 +286,30 @@ nav .campaign-lego-text {
 	@apply bg-primary-100;
 }
 
+/* --- ABOUT SECTION OPTIMIZATIONS --- */
+/* Apply text-justify and adjust line height for paragraphs in about section */
+#about .prose p {
+    @apply mb-3 text-base text-justify leading-normal; /* Reduced margin, font size, and line height */
+}
+
+/* Ensure the credentials button doesn't add excessive vertical space */
+.about-credentials-wrapper {
+    @apply mt-4 mb-4 text-center; /* Reduced margins, removed lg:text-left to keep centered */
+}
+
+/* Base font size for paragraphs within about section */
+#about .prose .text-lg { /* Targeting the specific text-lg that was on paragraphs */
+    @apply text-base; /* Default to base size */
+}
+
+
+/* --- MEDIA QUERIES ADJUSTMENTS FOR ABOUT SECTION --- */
+@media (min-width: 1024px) { /* Adjustments for larger screens (lg breakpoint) */
+    #about .container {
+        @apply py-10; /* Reduce padding on large screens */
+    }
+}
+
 @media (max-width: 768px) {
 	#hero-cover .container {
 		@apply pt-20 pb-20;
@@ -378,6 +402,35 @@ nav .campaign-lego-text {
 	.hero-video {
 		@apply max-w-70;
 	}
+
+    /* --- ABOUT SECTION OPTIMIZATIONS FOR MOBILE/TABLET --- */
+    #about .container {
+        @apply py-10; /* Reduce padding on mobile/tablet */
+    }
+    #about .lg:w-2/5, #about .lg:w-3/5 {
+        @apply w-full; /* Ensure full width on smaller screens */
+    }
+    #about .flex-col {
+        @apply gap-8; /* Slightly reduce gap between columns */
+    }
+    #about .prose p {
+        @apply mb-2 text-sm leading-snug; /* Further reduce paragraph margins, make text smaller, tighter line height */
+    }
+    #about h2 {
+        @apply text-3xl mb-4; /* Slightly reduce heading size and margin */
+    }
+    #about .mt-8 {
+        @apply mt-6; /* Reduce margin top for the photo's text block */
+    }
+    #about .mt-6 {
+        @apply mt-4; /* Reduce margin top for social icons and credentials button */
+    }
+    #about .text-2xl { /* For Benjamin Rodriguez name */
+        @apply text-xl;
+    }
+    #about .text-lg { /* For title below name */
+        @apply text-base;
+    }
 }
 @media (max-width: 480px) {
 	#hero-main-slogan {
@@ -418,6 +471,16 @@ nav .campaign-lego-text {
 	#lego.min-h-svh > .container {
 		@apply pt-16 pb-16;
 	}
+    /* --- ABOUT SECTION OPTIMIZATIONS FOR SMALL MOBILE --- */
+    #about .container {
+        @apply py-6; /* Further reduce padding on small mobile */
+    }
+    #about .prose p {
+        @apply text-xs leading-tight; /* Even smaller font for paragraphs and tighter leading */
+    }
+    #about h2 {
+        @apply text-2xl mb-3;
+    }
 }
 
 #submission-popup {
@@ -437,7 +500,18 @@ nav .campaign-lego-text {
     background: transparent;
 }
 
-
+.animate-blob {
+  animation: blobMove 8s infinite linear alternate;
+}
+@keyframes blobMove {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.08) rotate(8deg);
+  }
+}
 .is-ios::before {
   content: '';
   position: fixed;
