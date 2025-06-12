@@ -157,7 +157,7 @@ html, body {
 }
 @media (max-width: 768px) { /* Larger phones and small tablets */
     #video .watermark {
-        font-size: 9rem; /* Good size for most phones */
+        font-size: 12rem; /* Good size for most phones */
     }
 }
 @media (max-width: 480px) { /* Smaller phones */
