@@ -2,7 +2,6 @@
 @import "tailwindcss";
 
 @theme {
-	/* COLORS */
 	--color-primary: #5e186e;
 	--color-primary-100: #F3E8FF;
 	--color-primary-200: #E9D5FF;
@@ -28,12 +27,10 @@
 	--color-dark: #1A2E3A;
 	--color-light: #F5F9FC;
 
-	/* FONTS */
 	--font-sans: "Montserrat", sans-serif;
 	--font-serif: "Lora", serif;
 }
 
-/* Base and globally applied styles */
 html, body {
 	overscroll-behavior: none;
 	@apply overflow-x-hidden;
@@ -48,7 +45,6 @@ html, body {
 	background-repeat: no-repeat;
 }
 
-/* Animations */
 @keyframes pop-in {
 	0% { opacity: 0; transform: scale(0.8) translateY(30px); }
 	100% { opacity: 1; transform: scale(1) translateY(0); }
@@ -75,7 +71,6 @@ html, body {
         width: auto;
     }
 
-    /* Animated blob SVG */
     .animate-blob {
         animation: blobMove 8s infinite linear alternate;
     }
@@ -104,7 +99,6 @@ html, body {
     }
 
 
-    /* Video section wrapper */
     .hero-video {
         @apply w-full max-w-80 mx-auto aspect-[12/20] rounded-xl overflow-hidden relative shadow-2xl;
 
@@ -124,7 +118,6 @@ html, body {
         content: "•";
     }
 
-    /* Specific element adjustments that are too complex for utilities directly in HTML */
     #hero-main-slogan .hero-slogan-word {
         @apply font-sans font-extrabold tracking-wider leading-tight;
     }
@@ -132,7 +125,6 @@ html, body {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
 
-    /* Custom styles for LEGO blocks hover effect */
     .lego-card:hover {
         @apply -translate-y-2 scale-105 bg-white/25;
     }
@@ -148,9 +140,10 @@ body {
     background-color: var(--color-gray-50, #f5f9fc);
 }
 
-/* NEW: iOS-specific fix for fixed backgrounds */
+/* NEW: iOS-specific fix for fixed backgrounds - This is the key CSS part of the fix */
 body.is-ios .lego-bg {
     background-attachment: scroll !important; /* Force scroll on iOS */
+    /* Ensure other properties like cover and center are still inherited from .lego-bg */
 }
 
 /* Mobile menu specific styles */

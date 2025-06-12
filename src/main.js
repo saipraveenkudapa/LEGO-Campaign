@@ -18,15 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Apply iOS fix immediately on DOMContentLoaded
     if (isIos()) {
         document.body.classList.add('is-ios'); // Add class for potential future CSS targeting
-        
-        const heroCover = document.getElementById('hero-cover');
-        if (heroCover) {
-            heroCover.style.backgroundAttachment = 'scroll';
-        }
-        const legoSection = document.getElementById('lego');
-        if (legoSection) {
-            legoSection.style.backgroundAttachment = 'scroll';
-        }
+  
     }
 
     year();
