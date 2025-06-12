@@ -143,6 +143,12 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
+/* Ensure watermark is absolutely centered - NEW/UPDATED FOR THIS ISSUE */
+#video .watermark {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
 /* REFINED: body only sets background-color, no image properties */
 body {
     background-color: var(--color-gray-50, #f5f9fc);
@@ -156,17 +162,17 @@ body.is-ios::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* Place it behind all content */
-    background-image: url("/images/bg-legos.png"); /* Use the background image */
+    z-index: -1;
+    background-image: url("/images/bg-legos.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    pointer-events: none; /* Ensure it doesn't block interactions */
+    pointer-events: none;
 }
 
 /* On iOS, remove the background from .lego-bg to avoid conflicts */
 body.is-ios .lego-bg {
-    background: none !important; /* Hide the background from .lego-bg on iOS */
+    background: none !important;
 }
 
 
