@@ -143,14 +143,7 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
-/* Watermark centering (now handled by classes in HTML) */
-/* This rule is now primarily for consistency if needed, but not the main centering logic */
-#video .watermark {
-    /* The core centering is now via Tailwind classes left-1/2 and -translate-x-1/2 on the HTML element */
-    /* Remove redundant left/transform if it's causing issues, rely on utility classes */
-    /* left: 50% !important; */
-    /* transform: translateX(-50%) !important; */
-}
+
 
 /* Watermark font size for different screens */
 #video .watermark { /* Default for larger screens */
@@ -164,7 +157,7 @@ html, body {
 }
 @media (max-width: 768px) { /* Larger phones and small tablets */
     #video .watermark {
-        font-size: 6rem; /* Good size for most phones */
+        font-size: 9rem; /* Good size for most phones */
     }
 }
 @media (max-width: 480px) { /* Smaller phones */
