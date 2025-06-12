@@ -2,7 +2,33 @@ import nav from "./components/nav.js";
 import year from "./components/year.js";
 import form from "./components/form.js";
 
+// iOS background-attachment:fixed fix function
+function isIos() {
+    return [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+    ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    // Apply iOS fix immediately on DOMContentLoaded
+    if (isIos()) {
+        document.body.classList.add('is-ios'); // Add class for potential future CSS targeting
+        
+        const heroCover = document.getElementById('hero-cover');
+        if (heroCover) {
+            heroCover.style.backgroundAttachment = 'scroll';
+        }
+        const legoSection = document.getElementById('lego');
+        if (legoSection) {
+            legoSection.style.backgroundAttachment = 'scroll';
+        }
+    }
+
     year();
     nav();
     form();

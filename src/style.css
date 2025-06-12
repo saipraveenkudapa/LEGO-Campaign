@@ -42,11 +42,11 @@ html, body {
 
 .lego-bg {
 	background-image: url("/images/bg-legos.png");
-	background-attachment: fixed;
+	background-attachment: fixed; /* This is the default, but will be overridden by JS on iOS */
 	@apply bg-cover bg-center bg-no-repeat;
 }
 
-/* Animations - these require raw CSS keyframes */
+/* Animations */
 @keyframes pop-in {
 	0% { opacity: 0; transform: scale(0.8) translateY(30px); }
 	100% { opacity: 1; transform: scale(1) translateY(0); }
@@ -69,7 +69,7 @@ html, body {
         @apply flex items-center justify-center max-h-14 overflow-hidden;
     }
     .logo-container img {
-        height: 96px; /* Specific pixel value */
+        height: 96px;
         width: auto;
     }
 
@@ -77,28 +77,28 @@ html, body {
     .animate-blob {
         animation: blobMove 8s infinite linear alternate;
     }
-    .bio-image-wrapper { /* Ensure overflow hidden for the blob */
-        @apply relative flex items-center justify-center; /* Removed overflow-hidden */
+    .bio-image-wrapper {
+        @apply relative flex items-center justify-center;
     }
-    .bio-image-wrapper > div { /* Targeting the SVG wrapper */
+    .bio-image-wrapper > div {
         @apply absolute top-1/2 -translate-y-1/2 z-0;
-        left: -4rem; /* -left-16 */
+        left: -4rem;
     }
     @screen md {
         .bio-image-wrapper > div {
-            left: -6rem; /* md:-left-24 */
+            left: -6rem;
         }
     }
     .bio-image-wrapper svg {
-        @apply w-[450px] h-[450px]; /* Base size */
+        @apply w-[450px] h-[450px];
     }
     @screen md {
         .bio-image-wrapper svg {
-            @apply w-[600px] h-[600px]; /* MD size */
+            @apply w-[600px] h-[600px];
         }
     }
     .bio-image {
-        @apply relative z-10; /* Image should be above blob */
+        @apply relative z-10;
     }
 
 
@@ -126,7 +126,7 @@ html, body {
     #hero-main-slogan .hero-slogan-word {
         @apply font-sans font-extrabold tracking-wider leading-tight;
     }
-    #hero-main-slogan .slogan-secondary { /* Use a class instead of specific element type if possible */
+    #hero-main-slogan .slogan-secondary {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
 
@@ -141,19 +141,23 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
-/* iOS background fix - necessary due to iOS specific rendering quirks */
+/* iOS background fix - This generic body rule might interfere with .lego-bg */
+/* Consider if you want this global body background, or if .lego-bg handles it */
 body {
-    background-color: var(--color-gray-50, #f5f9fc); /* Fallback to default bg color */
-    background-image: url("/images/bg-legos.png"); /* Use the direct path */
-    background-attachment: fixed;
+    background-color: var(--color-gray-50, #f5f9fc);
+    /* background-image: url("/images/bg-legos.png"); Removing this as lego-bg class handles it */
+    /* background-attachment: fixed; */ /* Removed here, controlled by lego-bg class */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+/* This rule is removed as JS will directly set background-attachment to scroll for iOS */
+/*
 .is-ios .lego-bg {
     background: none;
 }
+*/
 
 /* Mobile menu specific styles */
 .mobile-menu {
@@ -166,37 +170,33 @@ body {
 	@apply flex flex-col space-y-4;
 }
 
-.nav-links a.active-link { /* */
-	@apply text-primary font-bold; /* */
+.nav-links a.active-link {
+	@apply text-primary font-bold;
 }
-#mobile-menu a.active-link { /* */
-	@apply bg-primary-100; /* */
+#mobile-menu a.active-link {
+	@apply bg-primary-100;
 }
 
-/* Updated: Stronger Radial gradient overlay for hero section */
+/* Stronger Radial gradient overlay for hero section and lego section */
 .radial-gradient-overlay {
     background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(0,0,0,0.9) 100%);
 }
 
 /* Accordion Animation Styles */
 .accordion-content {
-    overflow: hidden; /* Hide content when collapsed */
-    transition: height 0.3s ease-out, opacity 0.3s ease-out; /* Smooth transition for height and opacity */
-    opacity: 1; /* Default to visible */
+    overflow: hidden;
+    transition: height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 1;
 }
 
-/* When details is not open (and controlled by JS), force height to 0 and opacity to 0 */
 details:not([open]) > .accordion-content {
-    height: 0 !important; /* Use !important to override inline styles set by JS during transition */
+    height: 0 !important;
     opacity: 0;
 }
 
-/* Ensure summary has cursor to indicate interactivity */
 summary {
     cursor: pointer;
 }
-
-/* Removed arrow styles here, as per your request */
 
 
 /* Media Queries - simplified where possible, but still necessary for responsive adjustments */
@@ -266,7 +266,7 @@ summary {
     #about .container {
         @apply py-10;
     }
-    #about .lg\:w-2\/5, #about .lg\:w-3\/5 { /* Target specific utility, keep for robustness */
+    #about .lg\:w-2\/5, #about .lg\:w-3\/5 {
         @apply w-full;
     }
     #about .flex-col {
