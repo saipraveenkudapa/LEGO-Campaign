@@ -2,7 +2,7 @@ import nav from "./components/nav.js";
 import year from "./components/year.js";
 import form from "./components/form.js";
 
-// iOS background-attachment:fixed fix function
+// iOS detection function
 function isIos() {
     return [
         'iPad Simulator',
@@ -15,10 +15,10 @@ function isIos() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Apply iOS fix immediately on DOMContentLoaded
+    // Apply iOS fix by adding a class to body
     if (isIos()) {
-        document.body.classList.add('is-ios'); // Add class for potential future CSS targeting
-  
+        document.body.classList.add('is-ios'); 
+        // No direct style manipulation needed here anymore; CSS handles it via .is-ios class
     }
 
     year();
