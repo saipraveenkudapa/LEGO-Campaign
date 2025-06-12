@@ -143,22 +143,41 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
-/* Ensure watermark is absolutely centered */
+/* Watermark centering (now handled by classes in HTML) */
+/* This rule is now primarily for consistency if needed, but not the main centering logic */
 #video .watermark {
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    /* The core centering is now via Tailwind classes left-1/2 and -translate-x-1/2 on the HTML element */
+    /* Remove redundant left/transform if it's causing issues, rely on utility classes */
+    /* left: 50% !important; */
+    /* transform: translateX(-50%) !important; */
 }
 
-/* NEW: Adjust watermark font size for mobile screens */
-@media (max-width: 768px) { /* For tablets and larger phones */
+/* Watermark font size for different screens */
+#video .watermark { /* Default for larger screens */
+    font-size: 8rem; /* Original text-9xl size */
+}
+
+@media (max-width: 1024px) { /* Tablets and medium desktops */
     #video .watermark {
-        font-size: 6rem !important; /* Adjust as needed, e.g., 5rem, 4rem */
+        font-size: 7rem; /* Slightly smaller */
     }
 }
-@media (max-width: 480px) { /* For smaller phones */
+@media (max-width: 768px) { /* Larger phones and small tablets */
     #video .watermark {
-        font-size: 4rem !important; /* Adjust as needed, e.g., 3.5rem */
+        font-size: 6rem; /* Good size for most phones */
     }
+}
+@media (max-width: 480px) { /* Smaller phones */
+    #video .watermark {
+        font-size: 4rem; /* Ensure it fits on very narrow screens */
+    }
+}
+
+
+/* Move "My Vision in Action" heading up */
+#video h2 {
+    margin-top: -1rem; /* Adjust as needed, negative value moves it up */
+    /* For smaller screens, you might need specific media queries for this margin */
 }
 
 
