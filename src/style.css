@@ -143,22 +143,21 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
-/* Ensure watermark is absolutely centered (from previous fix attempt) */
+/* Ensure watermark is absolutely centered */
 #video .watermark {
     left: 50% !important;
     transform: translateX(-50%) !important;
 }
 
-/* NEW: Adjust watermark font size for mobile */
-@media (max-width: 768px) {
+/* NEW: Adjust watermark font size for mobile screens */
+@media (max-width: 768px) { /* For tablets and larger phones */
     #video .watermark {
-        font-size: 6rem; /* Smaller than text-9xl (which is 8rem) */
-        /* You can adjust this value further (e.g., 5rem, 4rem) to fit your design */
+        font-size: 6rem !important; /* Adjust as needed, e.g., 5rem, 4rem */
     }
 }
-@media (max-width: 480px) { /* Even smaller for very small phones */
+@media (max-width: 480px) { /* For smaller phones */
     #video .watermark {
-        font-size: 4rem; /* Even smaller for very narrow screens */
+        font-size: 4rem !important; /* Adjust as needed, e.g., 3.5rem */
     }
 }
 
@@ -168,7 +167,7 @@ body {
     background-color: var(--color-gray-50, #f5f9fc);
 }
 
-/* NEW: Aggressive iOS-specific fix for fixed backgrounds using pseudo-element */
+/* Aggressive iOS-specific fix for fixed backgrounds using pseudo-element */
 body.is-ios::before {
     content: '';
     position: fixed;
