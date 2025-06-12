@@ -42,7 +42,7 @@ html, body {
 
 .lego-bg {
 	background-image: url("/images/bg-legos.png");
-	background-attachment: fixed; /* This is the default, but will be overridden by JS on iOS */
+	background-attachment: fixed; /* This is the default behavior */
 	@apply bg-cover bg-center bg-no-repeat;
 }
 
@@ -141,23 +141,13 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
-/* iOS background fix - This generic body rule might interfere with .lego-bg */
-/* Consider if you want this global body background, or if .lego-bg handles it */
+/* Base body background color, but no image properties */
 body {
     background-color: var(--color-gray-50, #f5f9fc);
-    /* background-image: url("/images/bg-legos.png"); Removing this as lego-bg class handles it */
-    /* background-attachment: fixed; */ /* Removed here, controlled by lego-bg class */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 /* This rule is removed as JS will directly set background-attachment to scroll for iOS */
-/*
-.is-ios .lego-bg {
-    background: none;
-}
-*/
+/* .is-ios .lego-bg { background: none; } */
 
 /* Mobile menu specific styles */
 .mobile-menu {
