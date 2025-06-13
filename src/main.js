@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Apply iOS fix by adding a class to body
     if (isIos()) {
         document.body.classList.add('is-ios'); 
-        // No direct style manipulation needed here anymore; CSS handles it via .is-ios class
     }
 
     year();

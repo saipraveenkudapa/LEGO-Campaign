@@ -143,12 +143,14 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
-/* Watermark centering and sizing for different screens */
+/* Watermark centering and sizing for different screens - REVISED FOR THIS ISSUE */
 #video .watermark {
-    font-size: 8rem; /* Default for larger screens (text-9xl) */
+    font-size: 8rem; /* Original text-9xl size for desktop */
     left: 50% !important; /* Ensure it's centered */
     transform: translateX(-50%) !important; /* Adjust for element's own width */
     white-space: nowrap; /* Prevent wrapping */
+    /* Add an explicit width or max-width if still getting cut off to force containment */
+    /* width: 100%; */ /* Or max-width: 100% and adjust padding on parent */
 }
 
 @media (max-width: 1024px) { /* Tablets and medium desktops */
@@ -158,15 +160,15 @@ html, body {
 }
 @media (max-width: 768px) { /* Larger phones and small tablets */
     #video .watermark {
-        font-size: 5rem; /* Adjusted to fit better on mobile */
-        /* You might still need to experiment with letter-spacing if it's too wide: */
-        /* letter-spacing: -0.1em; */
+        font-size: 5rem; /* Reduced to fit better on mobile */
+        /* Consider reducing letter-spacing here if the word is still too wide */
+        /* letter-spacing: -0.05em; */
     }
 }
 @media (max-width: 480px) { /* Smaller phones */
     #video .watermark {
         font-size: 3.5rem; /* Further reduced for very narrow screens */
-        /* letter-spacing: -0.05em; */
+        /* letter-spacing: -0.02em; */
     }
 }
 
@@ -335,4 +337,43 @@ summary {
     }
 }
 
-@media (max-width: 4
+@media (max-width: 480px) {
+	#hero-main-slogan {
+		@apply text-3xl;
+	}
+	.hero-lego-text-image {
+		@apply text-2xl;
+	}
+	.hero-brod-text-image {
+		@apply text-base;
+	}
+	#hero-lego-brod {
+		@apply mt-6;
+	}
+	#hero-cover .container {
+		@apply pt-16 pb-16;
+	}
+
+	#lego h2 {
+		@apply text-2xl;
+	}
+	.lego-letter .text-7xl {
+		@apply text-4xl;
+	}
+	.lego-letter .text-2xl {
+		@apply text-base;
+	}
+	.min-h-svh > .container {
+		@apply pt-12 pb-12;
+	}
+	#lego.min-h-svh > .container {
+		@apply pt-16 pb-16;
+	}
+    /* ABOUT SECTION OPTIMIZATIONS FOR SMALL MOBILE */
+    #about .container {
+        @apply py-6;
+    }
+    #about h2 {
+        @apply text-2xl mb-3;
+    }
+}
