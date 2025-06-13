@@ -2,61 +2,61 @@
 @import "tailwindcss";
 
 @theme {
-	/* COLORS */
-	--color-primary: #5e186e;
-	--color-primary-100: #F3E8FF;
-	--color-primary-200: #E9D5FF;
-	--color-primary-300: #D8B4FE;
-	--color-primary-400: #C084FC;
-	--color-primary-500: #A855F7;
-	--color-primary-600: #9333EA;
-	--color-primary-700: #7E22CE;
-	--color-primary-800: #5E186E;
-	--color-primary-900: #581C87;
+    /* COLORS */
+    --color-primary: #5e186e;
+    --color-primary-100: #F3E8FF;
+    --color-primary-200: #E9D5FF;
+    --color-primary-300: #D8B4FE;
+    --color-primary-400: #C084FC;
+    --color-primary-500: #A855F7;
+    --color-primary-600: #9333EA;
+    --color-primary-700: #7E22CE;
+    --color-primary-800: #5E186E;
+    --color-primary-900: #581C87;
 
-	--color-secondary: #e500ce;
-	--color-secondary-100: #FDE8FF;
-	--color-secondary-200: #FBCFE8;
-	--color-secondary-300: #F9A8D4;
-	--color-secondary-400: #F472B6;
-	--color-secondary-500: #E500CE;
-	--color-secondary-600: #D100B8;
-	--color-secondary-700: #B800A0;
-	--color-secondary-800: #A0008A;
-	--color-secondary-900: #80006E;
-	--color-accent: #4A8C2D;
-	--color-dark: #1A2E3A;
-	--color-light: #F5F9FC;
+    --color-secondary: #e500ce;
+    --color-secondary-100: #FDE8FF;
+    --color-secondary-200: #FBCFE8;
+    --color-secondary-300: #F9A8D4;
+    --color-secondary-400: #F472B6;
+    --color-secondary-500: #E500CE;
+    --color-secondary-600: #D100B8;
+    --color-secondary-700: #B800A0;
+    --color-secondary-800: #A0008A;
+    --color-secondary-900: #80006E;
+    --color-accent: #4A8C2D;
+    --color-dark: #1A2E3A;
+    --color-light: #F5F9FC;
 
-	/* FONTS */
-	--font-sans: "Montserrat", sans-serif;
-	--font-serif: "Lora", serif;
+    /* FONTS */
+    --font-sans: "Montserrat", sans-serif;
+    --font-serif: "Lora", serif;
 }
 
 /* Base and globally applied styles */
 html, body {
-	overscroll-behavior: none;
-	@apply overflow-x-hidden;
-	scroll-behavior: smooth;
+    overscroll-behavior: none;
+    @apply overflow-x-hidden;
+    scroll-behavior: smooth;
 }
 
 .lego-bg {
-	background-image: url("/images/bg-legos.png");
-	background-attachment: fixed; /* Default for non-iOS */
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+    background-image: url("/images/bg-legos.png");
+    background-attachment: fixed; /* Default for non-iOS */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Animations */
 @keyframes pop-in {
-	0% { opacity: 0; transform: scale(0.8) translateY(30px); }
-	100% { opacity: 1; transform: scale(1) translateY(0); }
+    0% { opacity: 0; transform: scale(0.8) translateY(30px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 @keyframes fade-in-up {
-	0% { opacity: 0; transform: translateY(30px); }
-	100% { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes blobMove {
@@ -140,17 +140,15 @@ html, body {
 
 
 .watermark {
-	@apply absolute z-0 pointer-events-none;
+    @apply absolute z-0 pointer-events-none;
 }
 
-/* Watermark centering and sizing for different screens - REVISED FOR THIS ISSUE */
+/* Watermark centering and sizing for different screens */
 #video .watermark {
     font-size: 8rem; /* Original text-9xl size for desktop */
     left: 50% !important; /* Ensure it's centered */
     transform: translateX(-50%) !important; /* Adjust for element's own width */
     white-space: nowrap; /* Prevent wrapping */
-    /* Add an explicit width or max-width if still getting cut off to force containment */
-    /* width: 100%; */ /* Or max-width: 100% and adjust padding on parent */
 }
 
 @media (max-width: 1024px) { /* Tablets and medium desktops */
@@ -161,14 +159,11 @@ html, body {
 @media (max-width: 768px) { /* Larger phones and small tablets */
     #video .watermark {
         font-size: 5rem; /* Reduced to fit better on mobile */
-        /* Consider reducing letter-spacing here if the word is still too wide */
-        /* letter-spacing: -0.05em; */
     }
 }
 @media (max-width: 480px) { /* Smaller phones */
     #video .watermark {
         font-size: 3.5rem; /* Further reduced for very narrow screens */
-        /* letter-spacing: -0.02em; */
     }
 }
 
@@ -208,20 +203,20 @@ body.is-ios .lego-bg {
 
 /* Mobile menu specific styles */
 .mobile-menu {
-	@apply absolute top-full left-0 right-0 bg-white p-4 shadow-lg border-t border-gray-200;
+    @apply absolute top-full left-0 right-0 bg-white p-4 shadow-lg border-t border-gray-200;
 }
 .mobile-menu.hidden {
-	@apply hidden;
+    @apply hidden;
 }
 .mobile-menu:not(.hidden) {
-	@apply flex flex-col space-y-4;
+    @apply flex flex-col space-y-4;
 }
 
 .nav-links a.active-link {
-	@apply text-primary font-bold;
+    @apply text-primary font-bold;
 }
 #mobile-menu a.active-link {
-	@apply bg-primary-100;
+    @apply bg-primary-100;
 }
 
 /* Stronger Radial gradient overlay for hero section and lego section */
@@ -248,66 +243,66 @@ summary {
 
 /* Media Queries - simplified where possible, but still necessary for responsive adjustments */
 @media (max-width: 768px) {
-	#hero-cover .container {
-		@apply pt-20 pb-20;
-	}
-	#hero-main-slogan {
-		@apply text-4xl mb-6;
-	}
-	#hero-main-slogan .hero-slogan-word {
-		@apply tracking-wide leading-tight;
-	}
-	.hero-lego-brick-outline {
-		padding: 10px 20px 8px 20px;
-		border-width: 2.5px;
-	}
-	.hero-lego-nubs-outline {
-		@apply left-2 right-2;
-		top: -8px;
-	}
-	.hero-lego-nub-outline {
-		width: 14px;
-		height: 8px;
-		border-width: 2px;
-	}
-	.hero-lego-text-image {
-		@apply text-3xl;
-	}
-	.hero-brod-text-image {
-		@apply text-lg mt-2;
-	}
+    #hero-cover .container {
+        @apply pt-20 pb-20;
+    }
+    #hero-main-slogan {
+        @apply text-4xl mb-6;
+    }
+    #hero-main-slogan .hero-slogan-word {
+        @apply tracking-wide leading-tight;
+    }
+    .hero-lego-brick-outline {
+        padding: 10px 20px 8px 20px;
+        border-width: 2.5px;
+    }
+    .hero-lego-nubs-outline {
+        @apply left-2 right-2;
+        top: -8px;
+    }
+    .hero-lego-nub-outline {
+        width: 14px;
+        height: 8px;
+        border-width: 2px;
+    }
+    .hero-lego-text-image {
+        @apply text-3xl;
+    }
+    .hero-brod-text-image {
+        @apply text-lg mt-2;
+    }
 
-	.min-h-svh > .container {
-		@apply pt-16 pb-16;
-	}
-	#lego {
-		@apply pt-20 pb-20;
-	}
-	#lego.min-h-svh > .container {
-		@apply pt-20 pb-20;
-	}
-	#lego h2 {
-		@apply text-3xl mb-10;
-	}
-	.lego-letter {
-		@apply p-5;
-	}
-	.lego-letter .text-7xl {
-		@apply text-5xl mb-3;
-	}
-	.lego-letter .text-2xl {
-		@apply text-lg mb-2;
-	}
-	.lego-letter .text-base {
-		@apply text-sm;
-	}
+    .min-h-svh > .container {
+        @apply pt-16 pb-16;
+    }
+    #lego {
+        @apply pt-20 pb-20;
+    }
+    #lego.min-h-svh > .container {
+        @apply pt-20 pb-20;
+    }
+    #lego h2 {
+        @apply text-3xl mb-10;
+    }
+    .lego-letter {
+        @apply p-5;
+    }
+    .lego-letter .text-7xl {
+        @apply text-5xl mb-3;
+    }
+    .lego-letter .text-2xl {
+        @apply text-lg mb-2;
+    }
+    .lego-letter .text-base {
+        @apply text-sm;
+    }
 
-	.youtube-short-container {
-		@apply h-[500px] max-w-70;
-	}
-	.hero-video {
-		@apply max-w-70;
-	}
+    .youtube-short-container {
+        @apply h-[500px] max-w-70;
+    }
+    .hero-video {
+        @apply max-w-70;
+    }
 
     /* ABOUT SECTION OPTIMIZATIONS FOR MOBILE/TABLET */
     #about .container {
@@ -338,37 +333,37 @@ summary {
 }
 
 @media (max-width: 480px) {
-	#hero-main-slogan {
-		@apply text-3xl;
-	}
-	.hero-lego-text-image {
-		@apply text-2xl;
-	}
-	.hero-brod-text-image {
-		@apply text-base;
-	}
-	#hero-lego-brod {
-		@apply mt-6;
-	}
-	#hero-cover .container {
-		@apply pt-16 pb-16;
-	}
+    #hero-main-slogan {
+        @apply text-3xl;
+    }
+    .hero-lego-text-image {
+        @apply text-2xl;
+    }
+    .hero-brod-text-image {
+        @apply text-base;
+    }
+    #hero-lego-brod {
+        @apply mt-6;
+    }
+    #hero-cover .container {
+        @apply pt-16 pb-16;
+    }
 
-	#lego h2 {
-		@apply text-2xl;
-	}
-	.lego-letter .text-7xl {
-		@apply text-4xl;
-	}
-	.lego-letter .text-2xl {
-		@apply text-base;
-	}
-	.min-h-svh > .container {
-		@apply pt-12 pb-12;
-	}
-	#lego.min-h-svh > .container {
-		@apply pt-16 pb-16;
-	}
+    #lego h2 {
+        @apply text-2xl;
+    }
+    .lego-letter .text-7xl {
+        @apply text-4xl;
+    }
+    .lego-letter .text-2xl {
+        @apply text-base;
+    }
+    .min-h-svh > .container {
+        @apply pt-12 pb-12;
+    }
+    #lego.min-h-svh > .container {
+        @apply pt-16 pb-16;
+    }
     /* ABOUT SECTION OPTIMIZATIONS FOR SMALL MOBILE */
     #about .container {
         @apply py-6;
