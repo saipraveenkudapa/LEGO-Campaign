@@ -86,11 +86,7 @@ html, body {
         @apply absolute top-1/2 -translate-y-1/2 z-0;
         left: -4rem;
     }
-    @screen md {
-        .bio-image-wrapper > div {
-            left: -6rem;
-        }
-    }
+    
     .bio-image-wrapper svg {
         @apply w-[450px] h-[450px];
     }
@@ -143,35 +139,24 @@ html, body {
     @apply absolute z-0 pointer-events-none;
 }
 
-/* Watermark centering and sizing for different screens */
 #video .watermark {
-    font-size: 8rem; /* Original text-9xl size for desktop */
-    left: 50% !important; /* Ensure it's centered */
-    transform: translateX(-50%) !important; /* Adjust for element's own width */
-    white-space: nowrap; /* Prevent wrapping */
+  font-size: 8rem;
+  right: 44.5rem;
+  top: 2.5rem;
+  left: auto !important;
+  transform: none !important;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  #video .watermark { font-size: 6rem; }
+}
+@media (max-width: 768px) {
+  #video .watermark { font-size: 4rem; }
+}
+@media (max-width: 480px) {
+  #video .watermark { font-size: 3.5rem; }
 }
 
-@media (max-width: 1024px) { /* Tablets and medium desktops */
-    #video .watermark {
-        font-size: 7rem;
-    }
-}
-@media (max-width: 768px) { /* Larger phones and small tablets */
-    #video .watermark {
-        font-size: 5rem; /* Reduced to fit better on mobile */
-    }
-}
-@media (max-width: 480px) { /* Smaller phones */
-    #video .watermark {
-        font-size: 3.5rem; /* Further reduced for very narrow screens */
-    }
-}
-
-
-/* Move "My Vision in Action" heading up */
-#video h2 {
-    margin-top: -1rem; /* Adjust as needed, negative value moves it up */
-}
 
 
 /* REFINED: body only sets background-color, no image properties */
