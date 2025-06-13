@@ -143,33 +143,30 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
-/* Watermark centering */
+/* Watermark centering and sizing for different screens */
 #video .watermark {
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    /* Ensure it fits even if it means scaling the font dynamically */
-    white-space: nowrap; /* Keep it on one line */
-    /* Add a max-width for smaller screens if needed to prevent overflow */
-    /* font-size: 8rem; /* Keep this default for large screens */
+    font-size: 8rem; /* Default for larger screens (text-9xl) */
+    left: 50% !important; /* Ensure it's centered */
+    transform: translateX(-50%) !important; /* Adjust for element's own width */
+    white-space: nowrap; /* Prevent wrapping */
 }
 
-/* Watermark font size for different screens - REVISED */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) { /* Tablets and medium desktops */
     #video .watermark {
-        font-size: 7rem; /* Adjusted for tablets/medium desktops */
-        letter-spacing: -0.1em; /* Reduce spacing to fit if needed */
+        font-size: 7rem;
     }
 }
 @media (max-width: 768px) { /* Larger phones and small tablets */
     #video .watermark {
-        font-size: 5rem; /* Further reduced for mobile fitting */
-        letter-spacing: -0.1em; /* More aggressive spacing reduction */
+        font-size: 5rem; /* Adjusted to fit better on mobile */
+        /* You might still need to experiment with letter-spacing if it's too wide: */
+        /* letter-spacing: -0.1em; */
     }
 }
 @media (max-width: 480px) { /* Smaller phones */
     #video .watermark {
-        font-size: 3.5rem; /* Even smaller to ensure fit on very narrow screens */
-        letter-spacing: -0.05em; /* Fine-tune spacing */
+        font-size: 3.5rem; /* Further reduced for very narrow screens */
+        /* letter-spacing: -0.05em; */
     }
 }
 
@@ -338,43 +335,4 @@ summary {
     }
 }
 
-@media (max-width: 480px) {
-	#hero-main-slogan {
-		@apply text-3xl;
-	}
-	.hero-lego-text-image {
-		@apply text-2xl;
-	}
-	.hero-brod-text-image {
-		@apply text-base;
-	}
-	#hero-lego-brod {
-		@apply mt-6;
-	}
-	#hero-cover .container {
-		@apply pt-16 pb-16;
-	}
-
-	#lego h2 {
-		@apply text-2xl;
-	}
-	.lego-letter .text-7xl {
-		@apply text-4xl;
-	}
-	.lego-letter .text-2xl {
-		@apply text-base;
-	}
-	.min-h-svh > .container {
-		@apply pt-12 pb-12;
-	}
-	#lego.min-h-svh > .container {
-		@apply pt-16 pb-16;
-	}
-    /* ABOUT SECTION OPTIMIZATIONS FOR SMALL MOBILE */
-    #about .container {
-        @apply py-6;
-    }
-    #about h2 {
-        @apply text-2xl mb-3;
-    }
-}
+@media (max-width: 4
