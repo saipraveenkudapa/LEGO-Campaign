@@ -17,7 +17,7 @@ function isIos() {
 document.addEventListener("DOMContentLoaded", () => {
     // Apply iOS fix by adding a class to body
     if (isIos()) {
-        document.body.classList.add('is-ios'); 
+        document.body.classList.add('is-ios');
     }
 
     year();
@@ -27,15 +27,43 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
+    // Enhanced mobile menu toggle functionality
     if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent any default button behavior
             mobileMenu.classList.toggle('hidden');
+
+            // Toggle icon between bars and times
+            const icon = mobileMenuButton.querySelector('i');
+            if (icon) {
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.className = 'fas fa-bars text-2xl';
+                } else {
+                    icon.className = 'fas fa-times text-2xl';
+                }
+            }
         });
 
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-bars text-2xl';
+                }
+            }
+        });
+
+        // Ensure mobile menu links close the menu when clicked
         const mobileNavLinks = mobileMenu.querySelectorAll('a');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-bars text-2xl';
+                }
             });
         });
     }
