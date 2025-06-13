@@ -143,26 +143,33 @@ html, body {
 	@apply absolute z-0 pointer-events-none;
 }
 
-
-
-/* Watermark font size for different screens */
-#video .watermark { /* Default for larger screens */
-    font-size: 8rem; /* Original text-9xl size */
+/* Watermark centering */
+#video .watermark {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    /* Ensure it fits even if it means scaling the font dynamically */
+    white-space: nowrap; /* Keep it on one line */
+    /* Add a max-width for smaller screens if needed to prevent overflow */
+    /* font-size: 8rem; /* Keep this default for large screens */
 }
 
-@media (max-width: 1024px) { /* Tablets and medium desktops */
+/* Watermark font size for different screens - REVISED */
+@media (max-width: 1024px) {
     #video .watermark {
-        font-size: 7rem; /* Slightly smaller */
+        font-size: 7rem; /* Adjusted for tablets/medium desktops */
+        letter-spacing: -0.1em; /* Reduce spacing to fit if needed */
     }
 }
 @media (max-width: 768px) { /* Larger phones and small tablets */
     #video .watermark {
-        font-size: 15rem; /* Good size for most phones */
+        font-size: 5rem; /* Further reduced for mobile fitting */
+        letter-spacing: -0.1em; /* More aggressive spacing reduction */
     }
 }
 @media (max-width: 480px) { /* Smaller phones */
     #video .watermark {
-        font-size: 4rem; /* Ensure it fits on very narrow screens */
+        font-size: 3.5rem; /* Even smaller to ensure fit on very narrow screens */
+        letter-spacing: -0.05em; /* Fine-tune spacing */
     }
 }
 
@@ -170,7 +177,6 @@ html, body {
 /* Move "My Vision in Action" heading up */
 #video h2 {
     margin-top: -1rem; /* Adjust as needed, negative value moves it up */
-    /* For smaller screens, you might need specific media queries for this margin */
 }
 
 
