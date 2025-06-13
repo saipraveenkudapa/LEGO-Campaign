@@ -158,29 +158,42 @@
     </div>
   </section>
 
-
   <section id="video" class="relative bg-light text-dark min-h-svh flex flex-col justify-center items-center py-16 md:py-20">
-    <div class="watermark absolute top-10 left-1/2 -translate-x-1/2 text-9xl font-bold text-primary-800 opacity-10 z-0">LEGO</div>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10">
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="lg:w-1/2 text-center lg:text-left">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-800">My Vision in Action</h2>
-          <p class="text-xl mb-8">Learn more about my vision for Texas REALTORS®.</p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#contact" class="inline-block text-center text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out cursor-pointer bg-secondary hover:brightness-150" aria-label="Get Involved with the campaign">Get Involved</a>
-          </div>
-        </div>
-        <div class="w-full flex justify-center lg:justify-end overflow-hidden">
-          <div class="hero-video bg-gray-800 primary-glow">
-            <video class="w-full h-full object-cover" controls autoplay muted playsinline>
-              <source src="/images/video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
+  <div class="watermark absolute top-10 right-10 text-8xl md:text-9xl font-bold text-primary-800 opacity-10 z-0">
+    LEGO
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 relative z-10">
+    <!-- Responsive layout: stacked on mobile, side-by-side on desktop -->
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      
+      <!-- LEFT: Text block -->
+      <div class="w-full lg:w-1/2 text-center lg:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary-800">
+          My Vision in Action
+        </h2>
+        <p class="text-xl mb-6">
+          Learn more about my vision for Texas REALTORS®.
+        </p>
+        <a href="#contact" class="inline-block text-center text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out cursor-pointer bg-secondary hover:brightness-150">
+          Get Involved
+        </a>
+      </div>
+
+      <!-- RIGHT: Video block -->
+      <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        <div class="hero-video bg-gray-800 primary-glow">
+          <video class="w-full h-full object-cover" controls autoplay muted playsinline>
+            <source src="/images/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
 
   <section id="lego" class="lego-bg relative text-white overflow-hidden min-h-svh flex flex-col justify-center items-center py-20 md:py-24">
