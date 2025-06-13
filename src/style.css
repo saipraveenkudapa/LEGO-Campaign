@@ -148,7 +148,18 @@ html, body {
   white-space: nowrap;
 }
 @media (max-width: 1024px) {
-  #video .watermark { font-size: 6rem; }
+  #video .watermark {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-size: 4rem !important;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+    opacity: 0.1;
+  }
 }
 @media (max-width: 768px) {
   #video .watermark { font-size: 4rem; }
