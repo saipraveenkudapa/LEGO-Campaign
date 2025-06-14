@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     year();
-    nav();
+    nav(); // Call nav to handle active link highlighting
     form();
 
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -37,32 +37,58 @@ document.addEventListener("DOMContentLoaded", () => {
             const icon = mobileMenuButton.querySelector('i');
             if (icon) {
                 if (mobileMenu.classList.contains('hidden')) {
-                    icon.className = 'fas fa-bars text-2xl';
+                    icon.className = 'fas fa-bars text-2xl'; // Bars icon when hidden
                 } else {
-                    icon.className = 'fas fa-times text-2xl';
+                    icon.className = 'fas fa-times text-2xl'; // Times icon when visible
                 }
             }
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
+            // Check if the click is outside both the button and the menu
             if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-                const icon = mobileMenuButton.querySelector('i');
-                if (icon) {
-                    icon.className = 'fas fa-bars text-2xl';
+                if (!mobileMenu.classList.contains('hidden')) { // Only hide if it's currently visible
+                    mobileMenu.classList.add('hidden'); // Hide the menu
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.className = 'fas fa-bars text-2xl'; // Reset to bars icon
+                    }
                 }
             }
         });
 
-        // Ensure mobile menu links close the menu when clicked
+        // Ensure mobile menu links close the menu AND navigate when clicked
         const mobileNavLinks = mobileMenu.querySelectorAll('a');
         mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+            link.addEventListener('click', function(e) {
+                // Check if it's an anchor link to a section on the same page
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault(); // Prevent default anchor jump
+
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        // Smooth scroll to the target section
+                        const navHeight = document.querySelector('nav').offsetHeight || 0;
+                        const offsetTop = targetElement.offsetTop - navHeight;
+
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+
+                        // Optionally update the URL hash without jumping
+                        history.pushState(null, '', href);
+                    }
+                }
+
+                mobileMenu.classList.add('hidden'); // Hide the menu after click
                 const icon = mobileMenuButton.querySelector('i');
                 if (icon) {
-                    icon.className = 'fas fa-bars text-2xl';
+                    icon.className = 'fas fa-bars text-2xl'; // Reset to bars icon
                 }
             });
         });
@@ -93,6 +119,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', highlightNavLink);
     window.addEventListener('load', highlightNavLink);
 
+    // This block handles desktop navigation links.
+    // It's similar to the mobile link handling, but for desktop.
     const desktopNavLinks = document.querySelectorAll('nav .nav-links a');
     desktopNavLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -104,6 +132,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 const targetElement = document.getElementById(targetId);
 
                 if (targetElement) {
+                    const navHeight = document.querySelector('nav').offsetHeight || 0;
+                    const offsetTop = targetElement.offsetTop - navHeight;
+
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+
                     history.pushState(null, '', href);
                 }
             }
