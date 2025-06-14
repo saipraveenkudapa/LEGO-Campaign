@@ -134,69 +134,43 @@ html, body {
     }
 }
 
-#video {
-    @apply relative;
-}
 
 .watermark {
-    @apply absolute z-0 pointer-events-none opacity-10;
+    @apply absolute z-0 pointer-events-none;
 }
 
 #video .watermark {
-    font-size: 8rem;
-    right: 44.5rem;
-    top: 2.5rem;
-    left: auto !important;
-    transform: none !important;
-    white-space: nowrap;
+  font-size: 8rem;
+  right: 44.5rem;
+  top: 2.5rem;
+  left: auto !important;
+  transform: none !important;
+  white-space: nowrap;
 }
-
-/* Updated mobile responsive styles for video section */
 @media (max-width: 1024px) {
-    #video {
-        @apply flex flex-col items-center justify-center text-center;
-    }
-    
-    #video .container > div {
-        @apply flex flex-col items-center;
-    }
-
-    #video .watermark {
-        position: static !important;
-        font-size: 4rem !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        transform: none !important;
-        line-height: 1;
-    }
-
-    #video h2 {
-        @apply mt-0 mb-4;
-        line-height: 1.2;
-    }
-
-    /* Ensure text and watermark are aligned */
-    #video .w-full.lg\:w-1\/2:first-child {
-        @apply order-2;
-        margin-top: 2rem;
-    }
-
-    #video .w-full.lg\:w-1\/2:last-child {
-        @apply order-1;
-    }
+  #video .watermark {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-size: 6rem !important;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: -6.7rem;
+    margin-right: 12rem;
+    opacity: 0.1;
+  }
 }
+
 
 @media (max-width: 768px) {
-    #video .watermark {
-        font-size: 3.5rem !important;
-    }
+  #video .watermark { font-size: 4rem; }
+}
+@media (max-width: 480px) {
+  #video .watermark { font-size: 3.5rem; }
 }
 
-@media (max-width: 480px) {
-    #video .watermark {
-        font-size: 3rem !important;
-    }
-}
 
 
 /* REFINED: body only sets background-color, no image properties */
